@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import "../assets/css/style.css";
+// import "../assets/css/style.css";
 
 const HomePage = () => {
   useEffect(() => {
@@ -49,32 +49,32 @@ const HomePage = () => {
       {/* popup */}
 
       <main id="main">
-        <section id="info1" class="info1">
+        <section id="info1" className="info1">
           <div
-            class="container d-flex justify-content-center"
+            className="container d-flex justify-content-center"
             data-aos="fade-up"
           >
-            <div class="row d-flex align-items-center">
+            <div className="row d-flex align-items-center">
               <div
-                class="col-sm-6 order-1 order-lg-2 hero-img"
+                className="col-sm-6 order-1 order-lg-2 hero-img"
                 data-aos="zoom-in"
                 data-aos-delay="200"
               >
                 <img
                   src="img/travel1.png"
-                  class="img-fluid img animated rounded-circle mb-2"
+                  className="img-fluid img animated rounded-circle mb-2"
                   alt=""
                 />
               </div>
               <div
-                class="col-sm-6 pt-4 pt-lg-0 content"
+                className="col-sm-6 pt-4 pt-lg-0 content"
                 data-aos="fade-left"
                 data-aos-delay="100"
               >
                 <h3>
                   Voluptatem dignissimos provident quasi corporis voluptates
                 </h3>
-                <p class="fst-italic">
+                <p className="fst-italic">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
@@ -82,8 +82,8 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-        <section id="features" class="features">
-          <div class="container section-title" data-aos="fade-up">
+        <section id="features" className="features">
+          <div className="container section-title" data-aos="fade-up">
             <h2>Features</h2>
             <p>
               Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
@@ -91,10 +91,10 @@ const HomePage = () => {
             </p>
           </div>
 
-          <div class="container">
-            <div class="row gy-4 align-items-center features-item">
+          <div className="container">
+            <div className="row gy-4 align-items-center features-item">
               <div
-                class="col-lg-5 order-2 order-lg-1"
+                className="col-lg-5 order-2 order-lg-1"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
@@ -107,26 +107,26 @@ const HomePage = () => {
                 </p>
               </div>
               <div
-                class="col-lg-7 order-1 order-lg-2 d-flex align-items-center"
+                className="col-lg-7 order-1 order-lg-2 d-flex align-items-center"
                 data-aos="zoom-out"
                 data-aos-delay="100"
               >
-                <div class="image-stack">
-                  <img src="img/travelcar2.jpg" alt="" class="stack-front" />
-                  <img src="img/travelcar.jpg" alt="" class="stack-back" />
+                <div className="image-stack">
+                  <img src="img/travelcar2.jpg" alt="" className="stack-front" />
+                  <img src="img/travelcar.jpg" alt="" className="stack-back" />
                 </div>
               </div>
             </div>
 
-            <div class="row gy-4 align-items-stretch justify-content-between features-item ">
+            <div className="row gy-4 align-items-stretch justify-content-between features-item ">
               <div
-                class="col-lg-6 d-flex align-items-center features-img-bg"
+                className="col-lg-6 d-flex align-items-center features-img-bg"
                 data-aos="zoom-out"
               >
-                <img src="img/travelcar.jpg" class="img-fluid rounded" alt="" />
+                <img src="img/travelcar.jpg" className="img-fluid rounded" alt="" />
               </div>
               <div
-                class="col-lg-5 d-flex justify-content-center flex-column"
+                className="col-lg-5 d-flex justify-content-center flex-column"
                 data-aos="fade-up"
               >
                 <h3>Sunt consequatur ad ut est nulla</h3>
@@ -137,20 +137,20 @@ const HomePage = () => {
                 </p>
                 <ul>
                   <li>
-                    <i class="bi bi-check"></i>{" "}
+                    <i className="bi bi-check"></i>{" "}
                     <span>
                       Ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </span>
                   </li>
                   <li>
-                    <i class="bi bi-check"></i>
+                    <i className="bi bi-check"></i>
                     <span>
                       {" "}
                       Duis aute irure dolor in reprehenderit in voluptate velit.
                     </span>
                   </li>
                   <li>
-                    <i class="bi bi-check"></i>{" "}
+                    <i className="bi bi-check"></i>{" "}
                     <span>
                       Facilis ut et voluptatem aperiam. Autem soluta ad fugiat
                     </span>
@@ -162,32 +162,32 @@ const HomePage = () => {
           </div>
         </section>
 
-        <section id="info2" class="info2">
+        <section id="info2" className="info2">
           <div
-            class="container d-flex justify-content-center"
+            className="container d-flex justify-content-center"
             data-aos="fade-up"
           >
-            <div class="row d-flex align-items-center justify-content-between">
+            <div className="row d-flex align-items-center justify-content-between">
               <div
-                class="col-sm-6 order-1 order-lg-2 hero-img"
+                className="col-sm-6 order-1 order-lg-2 hero-img"
                 data-aos="zoom-in"
                 data-aos-delay="200"
               >
                 <img
                   src="img/travel3.png"
-                  class="img-fluid animated rounded-circle mb-2"
+                  className="img-fluid animated rounded-circle mb-2"
                   alt=""
                 />
               </div>
               <div
-                class="col-sm-6 pt-4 pt-lg-0 content"
+                className="col-sm-6 pt-4 pt-lg-0 content"
                 data-aos="fade-left"
                 data-aos-delay="100"
               >
                 <h3>
                   Voluptatem dignissimos provident quasi corporis voluptates
                 </h3>
-                <p class="fst-italic">
+                <p className="fst-italic">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
@@ -196,9 +196,9 @@ const HomePage = () => {
           </div>
         </section>
 
-        <section id="pricing" class="pricing">
-          <div class="container" data-aos="fade-up">
-            <div class="section-title">
+        <section id="pricing" className="pricing">
+          <div className="container" data-aos="fade-up">
+            <div className="section-title">
               <h2>MAIN FEATURES</h2>
               <p>
                 Our website offers a really insane main feature that has been
@@ -208,101 +208,101 @@ const HomePage = () => {
               </p>
             </div>
 
-            <div class="row">
-              <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="box">
+            <div className="row">
+              <div className="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div className="box">
                   <h3>Free Plan</h3>
                   <h4>
                     <sup>$</sup>0<span>per month</span>
                   </h4>
                   <ul>
                     <li>
-                      <i class="bx bx-check"></i> Quam adipiscing vitae proin
+                      <i className="bx bx-check"></i> Quam adipiscing vitae proin
                     </li>
                     <li>
-                      <i class="bx bx-check"></i> Nec feugiat nisl pretium
+                      <i className="bx bx-check"></i> Nec feugiat nisl pretium
                     </li>
                     <li>
-                      <i class="bx bx-check"></i> Nulla at volutpat diam uteera
+                      <i className="bx bx-check"></i> Nulla at volutpat diam uteera
                     </li>
-                    <li class="na">
-                      <i class="bx bx-x"></i>{" "}
+                    <li className="na">
+                      <i className="bx bx-x"></i>{" "}
                       <span>Pharetra massa massa ultricies</span>
                     </li>
-                    <li class="na">
-                      <i class="bx bx-x"></i>{" "}
+                    <li className="na">
+                      <i className="bx bx-x"></i>{" "}
                       <span>Massa ultricies mi quis hendrerit</span>
                     </li>
                   </ul>
-                  <a href="#" class="buy-btn">
+                  <a href="#" className="buy-btn">
                     Get Started
                   </a>
                 </div>
               </div>
 
               <div
-                class="col-lg-4 mt-4 mt-lg-0"
+                className="col-lg-4 mt-4 mt-lg-0"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                <div class="box featured">
+                <div className="box featured">
                   <h3>Business Plan</h3>
                   <h4>
                     <sup>$</sup>29<span>per month</span>
                   </h4>
                   <ul>
                     <li>
-                      <i class="bx bx-check"></i> Quam adipiscing vitae proin
+                      <i className="bx bx-check"></i> Quam adipiscing vitae proin
                     </li>
                     <li>
-                      <i class="bx bx-check"></i> Nec feugiat nisl pretium
+                      <i className="bx bx-check"></i> Nec feugiat nisl pretium
                     </li>
                     <li>
-                      <i class="bx bx-check"></i> Nulla at volutpat diam uteera
+                      <i className="bx bx-check"></i> Nulla at volutpat diam uteera
                     </li>
                     <li>
-                      <i class="bx bx-check"></i> Pharetra massa massa ultricies
+                      <i className="bx bx-check"></i> Pharetra massa massa ultricies
                     </li>
                     <li>
-                      <i class="bx bx-check"></i> Massa ultricies mi quis
+                      <i className="bx bx-check"></i> Massa ultricies mi quis
                       hendrerit
                     </li>
                   </ul>
-                  <a href="#" class="buy-btn">
+                  <a href="#" className="buy-btn">
                     Get Started
                   </a>
                 </div>
               </div>
 
               <div
-                class="col-lg-4 mt-4 mt-lg-0"
+                className="col-lg-4 mt-4 mt-lg-0"
                 data-aos="fade-up"
                 data-aos-delay="300"
               >
-                <div class="box">
+                <div className="box">
                   <h3>Developer Plan</h3>
                   <h4>
                     <sup>$</sup>49<span>per month</span>
                   </h4>
                   <ul>
                     <li>
-                      <i class="bx bx-check"></i> Quam adipiscing vitae proin
+                      <i className="bx bx-check"></i> Quam adipiscing vitae proin
                     </li>
                     <li>
-                      <i class="bx bx-check"></i> Nec feugiat nisl pretium
+                      <i className="bx bx-check"></i> Nec feugiat nisl pretium
                     </li>
                     <li>
-                      <i class="bx bx-check"></i> Nulla at volutpat diam uteera
+                      <i className="bx bx-check"></i> Nulla at volutpat diam uteera
                     </li>
                     <li>
-                      <i class="bx bx-check"></i> Pharetra massa massa ultricies
+                      <i className="bx bx-check"></i> Pharetra massa massa ultricies
                     </li>
                     <li>
-                      <i class="bx bx-check"></i> Massa ultricies mi quis
+                      <i className="bx bx-check"></i> Massa ultricies mi quis
                       hendrerit
                     </li>
                   </ul>
-                  <a href="#" class="buy-btn">
+                  <a href="#" className="buy-btn">
                     Get Started
                   </a>
                 </div>
@@ -311,9 +311,9 @@ const HomePage = () => {
           </div>
         </section>
 
-        <section id="faq" class="faq section-bg">
-          <div class="container" data-aos="fade-up">
-            <div class="section-title">
+        <section id="faq" className="faq section-bg">
+          <div className="container" data-aos="fade-up">
+            <div className="section-title">
               <h2>Frequently Asked Questions</h2>
               <p>
                 Magnam dolores commodi suscipit. Necessitatibus eius consequatur
@@ -323,22 +323,22 @@ const HomePage = () => {
               </p>
             </div>
 
-            <div class="faq-list">
+            <div className="faq-list">
               <ul>
                 <li data-aos="fade-up" data-aos-delay="100">
-                  <i class="bx bx-help-circle icon-help"></i>{" "}
+                  <i className="bx bx-help-circle icon-help"></i>{" "}
                   <a
                     data-bs-toggle="collapse"
-                    class="collapse"
+                    className="collapse"
                     data-bs-target="#faq-list-1"
                   >
                     Non consectetur a erat nam at lectus urna duis?{" "}
-                    <i class="bx bx-chevron-down icon-show"></i>
-                    <i class="bx bx-chevron-up icon-close"></i>
+                    <i className="bx bx-chevron-down icon-show"></i>
+                    <i className="bx bx-chevron-up icon-close"></i>
                   </a>
                   <div
                     id="faq-list-1"
-                    class="collapse show"
+                    className="collapse show"
                     data-bs-parent=".faq-list"
                   >
                     <p>
@@ -351,19 +351,19 @@ const HomePage = () => {
                 </li>
 
                 <li data-aos="fade-up" data-aos-delay="200">
-                  <i class="bx bx-help-circle icon-help"></i>{" "}
+                  <i className="bx bx-help-circle icon-help"></i>{" "}
                   <a
                     data-bs-toggle="collapse"
                     data-bs-target="#faq-list-2"
-                    class="collapsed"
+                    className="collapsed"
                   >
                     Feugiat scelerisque varius morbi enim nunc?{" "}
-                    <i class="bx bx-chevron-down icon-show"></i>
-                    <i class="bx bx-chevron-up icon-close"></i>
+                    <i className="bx bx-chevron-down icon-show"></i>
+                    <i className="bx bx-chevron-up icon-close"></i>
                   </a>
                   <div
                     id="faq-list-2"
-                    class="collapse"
+                    className="collapse"
                     data-bs-parent=".faq-list"
                   >
                     <p>
@@ -378,19 +378,19 @@ const HomePage = () => {
                 </li>
 
                 <li data-aos="fade-up" data-aos-delay="300">
-                  <i class="bx bx-help-circle icon-help"></i>{" "}
+                  <i className="bx bx-help-circle icon-help"></i>{" "}
                   <a
                     data-bs-toggle="collapse"
                     data-bs-target="#faq-list-3"
-                    class="collapsed"
+                    className="collapsed"
                   >
                     Dolor sit amet consectetur adipiscing elit?{" "}
-                    <i class="bx bx-chevron-down icon-show"></i>
-                    <i class="bx bx-chevron-up icon-close"></i>
+                    <i className="bx bx-chevron-down icon-show"></i>
+                    <i className="bx bx-chevron-up icon-close"></i>
                   </a>
                   <div
                     id="faq-list-3"
-                    class="collapse"
+                    className="collapse"
                     data-bs-parent=".faq-list"
                   >
                     <p>
@@ -405,19 +405,19 @@ const HomePage = () => {
                 </li>
 
                 <li data-aos="fade-up" data-aos-delay="400">
-                  <i class="bx bx-help-circle icon-help"></i>{" "}
+                  <i className="bx bx-help-circle icon-help"></i>{" "}
                   <a
                     data-bs-toggle="collapse"
                     data-bs-target="#faq-list-4"
-                    class="collapsed"
+                    className="collapsed"
                   >
                     Tempus quam pellentesque nec nam aliquam sem et tortor
-                    consequat? <i class="bx bx-chevron-down icon-show"></i>
-                    <i class="bx bx-chevron-up icon-close"></i>
+                    consequat? <i className="bx bx-chevron-down icon-show"></i>
+                    <i className="bx bx-chevron-up icon-close"></i>
                   </a>
                   <div
                     id="faq-list-4"
-                    class="collapse"
+                    className="collapse"
                     data-bs-parent=".faq-list"
                   >
                     <p>
@@ -431,20 +431,20 @@ const HomePage = () => {
                 </li>
 
                 <li data-aos="fade-up" data-aos-delay="500">
-                  <i class="bx bx-help-circle icon-help"></i>{" "}
+                  <i className="bx bx-help-circle icon-help"></i>{" "}
                   <a
                     data-bs-toggle="collapse"
                     data-bs-target="#faq-list-5"
-                    class="collapsed"
+                    className="collapsed"
                   >
                     Tortor vitae purus faucibus ornare. Varius vel pharetra vel
                     turpis nunc eget lorem dolor?{" "}
-                    <i class="bx bx-chevron-down icon-show"></i>
-                    <i class="bx bx-chevron-up icon-close"></i>
+                    <i className="bx bx-chevron-down icon-show"></i>
+                    <i className="bx bx-chevron-up icon-close"></i>
                   </a>
                   <div
                     id="faq-list-5"
-                    class="collapse"
+                    className="collapse"
                     data-bs-parent=".faq-list"
                   >
                     <p>

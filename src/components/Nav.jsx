@@ -1,7 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../assets/css/style.css";
 
 const Nav = () => {
+  useEffect(() => {
+    const selectHeader = document.querySelector("#header");
+
+    if (selectHeader) {
+      const headerScrolled = () => {
+        if (window.scrollY > 100) {
+          selectHeader.classList.add("header-scrolled");
+        } else {
+          selectHeader.classList.remove("header-scrolled");
+        }
+      };
+
+      window.addEventListener("load", headerScrolled);
+      window.addEventListener("scroll", headerScrolled);
+
+      return () => {
+        // Cleanup: Remove event listeners when the component unmounts
+        window.removeEventListener("load", headerScrolled);
+        window.removeEventListener("scroll", headerScrolled);
+      };
+    }
+  }, []);
   return (
     <>
       <div id="blur">
@@ -16,19 +39,19 @@ const Nav = () => {
               <div className="container d-flex justify-content-evenly">
                 <ul>
                   <li>
-                    <a className="nav-link scrollto active" href="#">
+                    <Link to="/" className="nav-link scrollto">
                       Home
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="nav-link scrollto" href="#">
+                    <Link to="/discover" className="nav-link scrollto">
                       Discover
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="nav-link scrollto" href="#">
+                    <Link to="/about" className="nav-link scrollto">
                       About
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a

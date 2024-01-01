@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "img": "public/image/b.jpg",
+    "province": "Phnom Penh",
+    "description": "some"
+  },
+  {
+    "id": 2,
+    "img": "public/image/sr.jpg",
+    "province": "Siem Reap",
+    "description": "some"
+  },
+  {
+    "id": 3,
+    "img": "public/image/pv.jpg",
+    "province": "Preah Vihear",
+    "description": "some"
+  },
+  {
+    "id": 4,
+    "img": "public/image/btt.jpg",
+    "province": "Battambang",
+    "description": "some"
+  },
+  {
+    "id": 5,
+    "img": "public/image/kampot.jpg",
+    "province": "Kampot",
+    "description": "some"
+  },
+  {
+    "id": 6,
+    "img": "public/image/md.jpg",
+    "province": "Mondulkiri",
+    "description": "Mondulkiri is a province in eastern Cambodia. It is known for its lush forests, rolling hills, and diverse wildlife. The province is home to several indigenous tribes"
+  },
+  {
+    "id": 7,
+    "img": "public/image/ks.jpg",
+    "province": "Kampong Spue",
+    "description": "some"
+  },
+  {
+    "id": 8,
+    "img": "public/image/ks.jpg",
+    "province": "Kampong Spue",
+    "description": "some"
+  },
+  {
+    "id": 9,
+    "img": "public/image/ks.jpg",
+    "province": "KPS",
+    "description": "alkjfljjjjjjjjjjjjjjjjjjjjjjj"
+  }
+]

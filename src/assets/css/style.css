@@ -407,9 +407,9 @@ section {
 /*--------------------------------------------------------------
 # About Us
 --------------------------------------------------------------*/
-.about{
+/* .about{
   margin-top: 20px;
-}
+} */
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;
@@ -541,6 +541,7 @@ section {
     width: 32px;
     height: 32px;
     background: #eff2f8;
+    text-decoration: none;
   }
   
   .team .member .social a i {
@@ -1403,8 +1404,7 @@ section {
   }
   
   .card {
-    margin-top: 0px;
-    margin-bottom: 20px;
+    margin: 0 0 20px;
     border-radius: 20px 20px 0 0;
     transition: transform 0.3s ease;
   }
@@ -1415,4 +1415,6 @@ section {
   .card:hover {
     transform: scale(1.1);
   }
-  
+  .card-link{
+    text-decoration: none;
+  }
