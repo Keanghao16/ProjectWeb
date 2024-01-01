@@ -1,19 +1,24 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import Nav from "./components/Nav"
-import Footer from "./components/Footer";
-import HomePage from "./pages/HomePage"; 
 
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+
+import "./assets/css/style.css";
 
 function App() {
   const router = createBrowserRouter([
     {
-      path: "/Nav",
-      element: <Nav />,
-    },
-    {
       path: "/",
       element: <HomePage />,
+    },
+    {
+      path: "/discover",
+      element: <></>,
+    },
+    {
+      path: "/about",
+      element: <AboutPage />,
     },
 
   ]);

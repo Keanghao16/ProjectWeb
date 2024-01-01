@@ -1,5 +1,6 @@
 import React from "react";
-import "../assets/css/style.css";
+import { Link } from "react-router-dom";
+
 
 const Nav = () => {
   return (
@@ -16,19 +17,19 @@ const Nav = () => {
               <div className="container d-flex justify-content-evenly">
                 <ul>
                   <li>
-                    <a className="nav-link scrollto active" href="#">
+                    <Link to="/" className="nav-link scrollto">
                       Home
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="nav-link scrollto" href="#">
+                    <Link to="/discover" className="nav-link scrollto">
                       Discover
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="nav-link scrollto" href="#">
+                    <Link to="/about" className="nav-link scrollto">
                       About
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a
