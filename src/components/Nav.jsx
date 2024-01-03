@@ -1,15 +1,68 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+
 import { Link } from "react-router-dom";
 
-
 const Nav = () => {
+  useEffect(() => {
+    const selectHeader = document.querySelector("#header");
+
+    if (selectHeader) {
+      const headerScrolled = () => {
+        if (window.scrollY > 100) {
+          selectHeader.classList.add("header-scrolled");
+        } else {
+          selectHeader.classList.remove("header-scrolled");
+        }
+      };
+
+      window.addEventListener("load", headerScrolled);
+      window.addEventListener("scroll", headerScrolled);
+
+      return () => {
+        window.removeEventListener("load", headerScrolled);
+        window.removeEventListener("scroll", headerScrolled);
+      };
+    }
+
+    // Mobile Nav Toggle
+    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const navbar = document.querySelector('#navbar');
+
+    const handleMobileNavToggle = () => {
+      navbar.classList.toggle('navbar-mobile');
+      mobileNavToggle.classList.toggle('bi-list');
+      mobileNavToggle.classList.toggle('bi-x');
+    };
+
+    if (mobileNavToggle) {
+      mobileNavToggle.addEventListener('click', handleMobileNavToggle);
+    }
+
+    // Dropdown Toggle
+    const navbarDropdowns = document.querySelectorAll('.navbar .dropdown > a');
+    const handleDropdownToggle = (e) => {
+      const dropdown = e.target.nextElementSibling;
+
+      if (navbar.classList.contains('navbar-mobile')) {
+        e.preventDefault();
+        dropdown.classList.toggle('dropdown-active');
+      }
+    };
+
+    navbarDropdowns.forEach((dropdown) => {
+      dropdown.addEventListener('click', handleDropdownToggle, true);
+    });
+
+  }, []);
+
   return (
     <>
       <div id="blur">
         <header id="header" className="fixed-top">
           <div className="container d-flex align-items-center justify-content-between">
             <h1 className="logo me-auto">
-              <a href="index.html">
+              <a href="/">
                 <img src={"public/image/triplogo.png"} alt="Logo" />
               </a>
             </h1>

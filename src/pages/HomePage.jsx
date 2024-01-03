@@ -61,7 +61,7 @@ const HomePage = () => {
                 data-aos-delay="200"
               >
                 <img
-                  src="img/travel1.png"
+                  src="public/image/travel1.png"
                   className="img-fluid img animated rounded-circle mb-2"
                   alt=""
                 />
@@ -112,8 +112,8 @@ const HomePage = () => {
                 data-aos-delay="100"
               >
                 <div className="image-stack">
-                  <img src="img/travelcar2.jpg" alt="" className="stack-front" />
-                  <img src="img/travelcar.jpg" alt="" className="stack-back" />
+                  <img src="public/imagetravelcar2.jpg" alt="" className="stack-front" />
+                  <img src="public/imagetravelcar.jpg" alt="" className="stack-back" />
                 </div>
               </div>
             </div>
@@ -123,7 +123,7 @@ const HomePage = () => {
                 className="col-lg-6 d-flex align-items-center features-img-bg"
                 data-aos="zoom-out"
               >
-                <img src="img/travelcar.jpg" className="img-fluid rounded" alt="" />
+                <img src="public/travelcar.jpg" className="img-fluid rounded" alt="" />
               </div>
               <div
                 className="col-lg-5 d-flex justify-content-center flex-column"
@@ -174,7 +174,7 @@ const HomePage = () => {
                 data-aos-delay="200"
               >
                 <img
-                  src="img/travel3.png"
+                  src="public/imagetravel3.png"
                   className="img-fluid animated rounded-circle mb-2"
                   alt=""
                 />
