@@ -1,0 +1,69 @@
+{
+  "KohKong": {
+    "name": "Koh Kong",
+    "imageShow": ["public/image/island1.jpg", "public/image/island2.jpg", "public/image/island3.jpg"],
+    "description": [
+      "As the gateway to the magnificent temples of Angkor, Siem Reap is sitting on Southeast Asia's biggest drawcard, yet the town and its people still retain their countryside outlook and wonderful sense of Cambodian hospitality."
+    ],
+    "hint": [
+      "Photography",
+      "Touring Angkor Wat By Bicycle",
+      "Enjoy Sunrise and Sunset at Angkor Wat",
+      "Exploring the Angkor Temples with guide",
+      "bongslsoy",
+      "ajfkajfjakdsjlkfdsjk"
+    ],
+    "transportation": ["45 min - 1 hour", "4 hours", "4 - 5 hours"],
+    "placeNearby": [
+      {
+        "name": "Phnom Bakheng",
+        "image": "public/image/island1.jpg"
+      },
+      {
+        "name": "Phimeanakas Temple",
+        "image": "public/image/island2.jpg"
+      },
+      {
+        "name": "Angkor Thom",
+        "image": "public/image/island3.jpg"
+      },
+      {
+        "name": "Angkor Toch",
+        "image": "public/image/island3.jpg"
+      }
+    ]
+  },
+  "PhnomPenh": {
+    "name": "Phnom Penh",
+    "imageShow": [
+      "public/image/phnompenh1.jpg",
+      "public/image/phnompenh2.jpg",
+      "public/image/phnompenh3.jpg"
+    ],
+    "description": [
+      "Phnom Penh is the vibrant capital of Cambodia, known for its rich history, stunning architecture, and lively street markets."
+    ],
+    "hint": [
+      "Royal Palace",
+      "Tuol Sleng Genocide Museum",
+      "Wat Phnom",
+      "Riverfront Park",
+      "Central Market"
+    ],
+    "transportation": ["30 min - 1 hour", "5 hours", "6 - 7 hours"],
+    "placeNearby": [
+      {
+        "name": "Silver Pagoda",
+        "image": "public/image/phnompenh1.jpg"
+      },
+      {
+        "name": "National Museum of Cambodia",
+        "image": "public/image/phnompenh2.jpg"
+      },
+      {
+        "name": "Independence Monument",
+        "image": "public/image/phnompenh3.jpg"
+      }
+    ]
+  }
+}
