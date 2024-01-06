@@ -33,6 +33,39 @@ const Nav = ({ currentPage, headerElementId }) => {
 
   // Mobile Nav Toggle
 
+  function toggle(action) {
+    var blur = document.getElementById("blur");
+    var popup = document.getElementById("popup");
+    var body = document.body;
+
+    if (action === "close") {
+      blur.classList.remove("active");
+      popup.classList.remove("active");
+      body.classList.remove("popup-active");
+    } else {
+      blur.classList.add("active");
+      popup.classList.add("active");
+      body.classList.add("popup-active");
+    }
+  }
+
+  // close the popup when clicking outside and ESC key
+  document.addEventListener("click", function (event) {
+    var popup = document.getElementById("popup");
+    var blur = document.getElementById("blur");
+
+    if (!popup.contains(event.target) && !blur.contains(event.target)) {
+      toggle("close");
+    }
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      toggle("close");
+    }
+  });
+  
+
   return (
     <>
       <div id="blur">
@@ -80,7 +113,7 @@ const Nav = ({ currentPage, headerElementId }) => {
                     <a
                       className="loginsignups nav-link scrollto signinBTN"
                       href="#"
-                      // onClick={() => toggle()}
+                      onClick={() => toggle()}
                     >
                       Sign In
                     </a>
