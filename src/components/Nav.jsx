@@ -1,18 +1,22 @@
 import React, { useEffect } from "react";
 
-
 import { Link } from "react-router-dom";
 
-const Nav = () => {
+const Nav = ({ currentPage, headerElementId }) => {
   useEffect(() => {
-    const selectHeader = document.querySelector("#header");
+    const selectHeader = document.querySelector(`#${headerElementId}`);
 
     if (selectHeader) {
       const headerScrolled = () => {
-        if (window.scrollY > 100) {
-          selectHeader.classList.add("header-scrolled");
+        if (currentPage === "HomePage") {
+          if (window.scrollY > 100) {
+            selectHeader.classList.add("header-scrolled");
+          } else {
+            selectHeader.classList.remove("header-scrolled");
+          }
         } else {
-          selectHeader.classList.remove("header-scrolled");
+          // For pages other than HomePage, always add the class
+          selectHeader.classList.add("header-scrolled");
         }
       };
 
@@ -24,37 +28,38 @@ const Nav = () => {
         window.removeEventListener("scroll", headerScrolled);
       };
     }
+  }, [currentPage, headerElementId]);
 
-    // Mobile Nav Toggle
-    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
-    const navbar = document.querySelector('#navbar');
+  // // Mobile Nav Toggle
+  // const mobileNavToggle = document.querySelector(
+  //   ".mobileAre we going-nav-toggle"
+  // );
+  // const navbar = document.querySelector("#navbar");
 
-    const handleMobileNavToggle = () => {
-      navbar.classList.toggle('navbar-mobile');
-      mobileNavToggle.classList.toggle('bi-list');
-      mobileNavToggle.classList.toggle('bi-x');
-    };
+  // const handleMobileNavToggle = () => {
+  //   navbar.classList.toggle("navbar-mobile");
+  //   mobileNavToggle.classList.toggle("bi-list");
+  //   mobileNavToggle.classList.toggle("bi-x");
+  // };
 
-    if (mobileNavToggle) {
-      mobileNavToggle.addEventListener('click', handleMobileNavToggle);
-    }
+  // if (mobileNavToggle) {
+  //   mobileNavToggle.addEventListener("click", handleMobileNavToggle);
+  // }
 
-    // Dropdown Toggle
-    const navbarDropdowns = document.querySelectorAll('.navbar .dropdown > a');
-    const handleDropdownToggle = (e) => {
-      const dropdown = e.target.nextElementSibling;
+  // // Dropdown Toggle
+  // const navbarDropdowns = document.querySelectorAll(".navbar .dropdown > a");
+  // const handleDropdownToggle = (e) => {
+  //   const dropdown = e.target.nextElementSibling;
 
-      if (navbar.classList.contains('navbar-mobile')) {
-        e.preventDefault();
-        dropdown.classList.toggle('dropdown-active');
-      }
-    };
+  //   if (navbar.classList.contains("navbar-mobile")) {
+  //     e.preventDefault();
+  //     dropdown.classList.toggle("dropdown-active");
+  //   }
+  // };
 
-    navbarDropdowns.forEach((dropdown) => {
-      dropdown.addEventListener('click', handleDropdownToggle, true);
-    });
-
-  }, []);
+  // navbarDropdowns.forEach((dropdown) => {
+  //   dropdown.addEventListener("click", handleDropdownToggle, true);
+  // });
 
   return (
     <>

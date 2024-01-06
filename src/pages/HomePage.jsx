@@ -13,7 +13,8 @@ const HomePage = () => {
   }, []);
   return (
     <>
-      <Nav />
+      <Nav currentPage="HomePage" headerElementId="header" />
+
       <section id="hero" className="d-flex">
         <img
           className="mainbg"
@@ -112,8 +113,16 @@ const HomePage = () => {
                 data-aos-delay="100"
               >
                 <div className="image-stack">
-                  <img src="public/imagetravelcar2.jpg" alt="" className="stack-front" />
-                  <img src="public/imagetravelcar.jpg" alt="" className="stack-back" />
+                  <img
+                    src="public/imagetravelcar2.jpg"
+                    alt=""
+                    className="stack-front"
+                  />
+                  <img
+                    src="public/imagetravelcar.jpg"
+                    alt=""
+                    className="stack-back"
+                  />
                 </div>
               </div>
             </div>
@@ -123,7 +132,11 @@ const HomePage = () => {
                 className="col-lg-6 d-flex align-items-center features-img-bg"
                 data-aos="zoom-out"
               >
-                <img src="public/travelcar.jpg" className="img-fluid rounded" alt="" />
+                <img
+                  src="public/travelcar.jpg"
+                  className="img-fluid rounded"
+                  alt=""
+                />
               </div>
               <div
                 className="col-lg-5 d-flex justify-content-center flex-column"
@@ -217,13 +230,15 @@ const HomePage = () => {
                   </h4>
                   <ul>
                     <li>
-                      <i className="bx bx-check"></i> Quam adipiscing vitae proin
+                      <i className="bx bx-check"></i> Quam adipiscing vitae
+                      proin
                     </li>
                     <li>
                       <i className="bx bx-check"></i> Nec feugiat nisl pretium
                     </li>
                     <li>
-                      <i className="bx bx-check"></i> Nulla at volutpat diam uteera
+                      <i className="bx bx-check"></i> Nulla at volutpat diam
+                      uteera
                     </li>
                     <li className="na">
                       <i className="bx bx-x"></i>{" "}
@@ -252,16 +267,19 @@ const HomePage = () => {
                   </h4>
                   <ul>
                     <li>
-                      <i className="bx bx-check"></i> Quam adipiscing vitae proin
+                      <i className="bx bx-check"></i> Quam adipiscing vitae
+                      proin
                     </li>
                     <li>
                       <i className="bx bx-check"></i> Nec feugiat nisl pretium
                     </li>
                     <li>
-                      <i className="bx bx-check"></i> Nulla at volutpat diam uteera
+                      <i className="bx bx-check"></i> Nulla at volutpat diam
+                      uteera
                     </li>
                     <li>
-                      <i className="bx bx-check"></i> Pharetra massa massa ultricies
+                      <i className="bx bx-check"></i> Pharetra massa massa
+                      ultricies
                     </li>
                     <li>
                       <i className="bx bx-check"></i> Massa ultricies mi quis
@@ -286,16 +304,19 @@ const HomePage = () => {
                   </h4>
                   <ul>
                     <li>
-                      <i className="bx bx-check"></i> Quam adipiscing vitae proin
+                      <i className="bx bx-check"></i> Quam adipiscing vitae
+                      proin
                     </li>
                     <li>
                       <i className="bx bx-check"></i> Nec feugiat nisl pretium
                     </li>
                     <li>
-                      <i className="bx bx-check"></i> Nulla at volutpat diam uteera
+                      <i className="bx bx-check"></i> Nulla at volutpat diam
+                      uteera
                     </li>
                     <li>
-                      <i className="bx bx-check"></i> Pharetra massa massa ultricies
+                      <i className="bx bx-check"></i> Pharetra massa massa
+                      ultricies
                     </li>
                     <li>
                       <i className="bx bx-check"></i> Massa ultricies mi quis

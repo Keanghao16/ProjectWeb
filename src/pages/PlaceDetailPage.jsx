@@ -14,7 +14,7 @@ const AboutPage = () => {
 
   return (
     <>
-      {/* <Nav /> */}
+      <Nav />
 
       <div className="container my-5">
         <div className="row">
