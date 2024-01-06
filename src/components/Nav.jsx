@@ -6,60 +6,32 @@ const Nav = ({ currentPage, headerElementId }) => {
   useEffect(() => {
     const selectHeader = document.querySelector(`#${headerElementId}`);
 
-    if (selectHeader) {
-      const headerScrolled = () => {
-        if (currentPage === "HomePage") {
-          if (window.scrollY > 100) {
-            selectHeader.classList.add("header-scrolled");
-          } else {
-            selectHeader.classList.remove("header-scrolled");
-          }
-        } else {
-          // For pages other than HomePage, always add the class
+    const headerScrolled = () => {
+      if (currentPage === "HomePage") {
+        if (window.scrollY > 100) {
           selectHeader.classList.add("header-scrolled");
+        } else {
+          selectHeader.classList.remove("header-scrolled");
         }
-      };
+      } else {
+        // For pages other than HomePage, always add the class
+        selectHeader.classList.add("header-scrolled");
+      }
+    };
 
-      window.addEventListener("load", headerScrolled);
-      window.addEventListener("scroll", headerScrolled);
+    // Call headerScrolled manually when the currentPage changes
+    headerScrolled();
 
-      return () => {
-        window.removeEventListener("load", headerScrolled);
-        window.removeEventListener("scroll", headerScrolled);
-      };
-    }
+    // Add event listeners
+    window.addEventListener("scroll", headerScrolled);
+
+    // Cleanup: Remove event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", headerScrolled);
+    };
   }, [currentPage, headerElementId]);
 
-  // // Mobile Nav Toggle
-  // const mobileNavToggle = document.querySelector(
-  //   ".mobileAre we going-nav-toggle"
-  // );
-  // const navbar = document.querySelector("#navbar");
-
-  // const handleMobileNavToggle = () => {
-  //   navbar.classList.toggle("navbar-mobile");
-  //   mobileNavToggle.classList.toggle("bi-list");
-  //   mobileNavToggle.classList.toggle("bi-x");
-  // };
-
-  // if (mobileNavToggle) {
-  //   mobileNavToggle.addEventListener("click", handleMobileNavToggle);
-  // }
-
-  // // Dropdown Toggle
-  // const navbarDropdowns = document.querySelectorAll(".navbar .dropdown > a");
-  // const handleDropdownToggle = (e) => {
-  //   const dropdown = e.target.nextElementSibling;
-
-  //   if (navbar.classList.contains("navbar-mobile")) {
-  //     e.preventDefault();
-  //     dropdown.classList.toggle("dropdown-active");
-  //   }
-  // };
-
-  // navbarDropdowns.forEach((dropdown) => {
-  //   dropdown.addEventListener("click", handleDropdownToggle, true);
-  // });
+  // Mobile Nav Toggle
 
   return (
     <>
@@ -75,17 +47,32 @@ const Nav = ({ currentPage, headerElementId }) => {
               <div className="container d-flex justify-content-evenly">
                 <ul>
                   <li>
-                    <Link to="/" className="nav-link scrollto">
+                    <Link
+                      to="/"
+                      className={`nav-link scrollto ${
+                        location.pathname === "/" && "active"
+                      }`}
+                    >
                       Home
                     </Link>
                   </li>
                   <li>
-                    <Link to="/discover" className="nav-link scrollto">
+                    <Link
+                      to="/discover"
+                      className={`nav-link scrollto ${
+                        location.pathname === "/discover" && "active"
+                      }`}
+                    >
                       Discover
                     </Link>
                   </li>
                   <li>
-                    <Link to="/about" className="nav-link scrollto">
+                    <Link
+                      to="/about"
+                      className={`nav-link scrollto ${
+                        location.pathname === "/about" && "active"
+                      }`}
+                    >
                       About
                     </Link>
                   </li>
@@ -93,7 +80,7 @@ const Nav = ({ currentPage, headerElementId }) => {
                     <a
                       className="loginsignups nav-link scrollto signinBTN"
                       href="#"
-                      onClick={() => toggle()}
+                      // onClick={() => toggle()}
                     >
                       Sign In
                     </a>

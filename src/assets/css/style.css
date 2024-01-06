@@ -178,6 +178,7 @@ h6 {
   color: #e6ae17;
 }
 
+
 .navbar .loginsignups,
 .navbar .loginsignups:focus {
   padding: 8px 20px;
@@ -407,9 +408,9 @@ section {
 /*--------------------------------------------------------------
 # About Us
 --------------------------------------------------------------*/
-/* .about{
-  margin-top: 20px;
-} */
+.about{
+  margin-top: 80px;
+}
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;
@@ -1395,7 +1396,7 @@ section {
   /*DISCOVER*/
 
   .discovertitle{
-    padding-top: 50px;
+    padding-top: 0px;
   }
   .card-img-fixed {
     height: 200px;
