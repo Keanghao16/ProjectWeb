@@ -85,61 +85,77 @@ const Nav = ({
     <>
       <div id="blur">
         <header id="header" className="fixed-top">
-          <div className="container d-flex align-items-center justify-content-between">
-            <h1 className="logo me-auto">
-              <a onClick={NavigateToHome}>
-                <img src={"public/image/triplogo.png"} alt="Logo" />
-              </a>
-            </h1>
+          <div className="container">
             <nav
               id="navbar"
-              className={`navbar ${isNavbarMobile ? "navbar-mobile" : ""}`}
+              className="navbar navbar-expand-lg navbar-dark static-top"
             >
-              <div className="container d-flex justify-content-evenly">
-                <ul>
-                  <li>
-                    <Link
-                      to="/"
-                      className={`nav-link scrollto ${
-                        location.pathname === "/" && "active"
-                      }`}
-                    >
-                      Home
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/discover"
-                      className={`nav-link scrollto ${
-                        location.pathname === "/discover" && "active"
-                      }`}
-                    >
-                      Discover
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/about"
-                      className={`nav-link scrollto ${
-                        location.pathname === "/about" && "active"
-                      }`}
-                    >
-                      About
-                    </Link>
-                  </li>
-                  <li>
-                    <a
-                      className="loginsignups nav-link scrollto signinBTN"
-                      href="#"
-                      onClick={() => toggle()}
-                    >
-                      Sign In
-                    </a>
-                  </li>
-                </ul>
+              <div className="container">
+                <div className="navbar-brand">
+                  <b onClick={NavigateToHome}>
+                    <img src={"public/image/triplogo.png"} alt="Logo" />
+                  </b>
+                </div>
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                  className="collapse navbar-collapse"
+                  id="navbarSupportedContent"
+                >
+                  <ul className="navbar-nav ms-auto">
+                    <li className="nav-item">
+                      <Link
+                        to="/"
+                        className={`nav-link scrollto ${
+                          location.pathname === "/" && "active"
+                        }`}
+                      >
+                        Home
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/discover"
+                        className={`nav-link scrollto ${
+                          location.pathname === "/discover" && "active"
+                        }`}
+                      >
+                        Discover
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/about"
+                        className={`nav-link scrollto ${
+                          location.pathname === "/about" && "active"
+                        }`}
+                      >
+                        About
+                      </Link>
+                    </li>
+                    <li>
+                      <a
+                        className="loginsignups nav-link scrollto signinBTN"
+                        href="#"
+                        onClick={() => toggle()}
+                      >
+                        Sign In
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
+
             <div
               id="dropdown"
               className="dropdown text-end mx-5"
