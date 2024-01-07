@@ -7,14 +7,14 @@ import "aos/dist/aos.css";
 import "../assets/css/style.css";
 import { KohKong, PhnomPenh } from "../data/PlaceDetail.json";
 
-const AboutPage = () => {
+const PlaceDetail = () => {
   useEffect(() => {
     AOS.init();
   }, []);
 
   return (
     <>
-      <Nav />
+      <Nav currentPage="PlaceDetail" headerElementId="header" />
 
       <div className="container my-5">
         <div className="row">
@@ -165,9 +165,9 @@ const AboutPage = () => {
         </div>
       </div>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
 
-export default AboutPage;
+export default PlaceDetail;

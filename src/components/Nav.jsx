@@ -1,8 +1,14 @@
 import React, { useEffect } from "react";
 
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const Nav = ({ currentPage, headerElementId }) => {
+const Nav = ({
+  currentPage,
+  headerElementId,
+  isPopupActive,
+  setPopupActive,
+}) => {
   useEffect(() => {
     const selectHeader = document.querySelector(`#${headerElementId}`);
 
@@ -28,8 +34,14 @@ const Nav = ({ currentPage, headerElementId }) => {
     // Cleanup: Remove event listener when the component unmounts
     return () => {
       window.removeEventListener("scroll", headerScrolled);
+      document.body.style.overflow = ""; // Restore default overflow
     };
   }, [currentPage, headerElementId]);
+  const navigate = useNavigate();
+
+  const NavigateToHome = () => {
+    navigate("/");
+  };
 
   // Mobile Nav Toggle
 
@@ -39,13 +51,17 @@ const Nav = ({ currentPage, headerElementId }) => {
     var body = document.body;
 
     if (action === "close") {
+      setPopupActive(false);
       blur.classList.remove("active");
       popup.classList.remove("active");
       body.classList.remove("popup-active");
+      body.style.overflow = ""; // Restore default overflow
     } else {
+      setPopupActive(true);
       blur.classList.add("active");
       popup.classList.add("active");
       body.classList.add("popup-active");
+      body.style.overflow = "hidden"; // Prevent scrolling
     }
   }
 
@@ -64,7 +80,6 @@ const Nav = ({ currentPage, headerElementId }) => {
       toggle("close");
     }
   });
-  
 
   return (
     <>
@@ -72,7 +87,7 @@ const Nav = ({ currentPage, headerElementId }) => {
         <header id="header" className="fixed-top">
           <div className="container d-flex align-items-center justify-content-between">
             <h1 className="logo me-auto">
-              <a href="/">
+              <a onClick={NavigateToHome}>
                 <img src={"public/image/triplogo.png"} alt="Logo" />
               </a>
             </h1>

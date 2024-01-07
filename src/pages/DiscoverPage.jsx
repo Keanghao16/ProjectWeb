@@ -15,7 +15,7 @@ const DiscoverPage = () => {
     <>
       <Nav currentPage="DiscoverPage" headerElementId="header" />
       <main id="main">
-        <section id="about" className="about">
+        <section id="discover" className="disc">
           <div className="container discovertitle" data-aos="fade-up">
             <div className="section-title">
               <h2>Popular Places</h2>
@@ -31,7 +31,10 @@ const DiscoverPage = () => {
         <div className="row gy-3 my-3">
           {Province &&
             Province.map((province) => (
-              <div className="col-sm-6 col-md-4 col-lg-3" key={province.id}>
+              <div
+                className="col-sm-6 col-md-4 col-lg-3 province-card"
+                key={province.id}
+              >
                 <a href="#" className="card-link">
                   <div className="card" data-aos="zoom-out">
                     <img

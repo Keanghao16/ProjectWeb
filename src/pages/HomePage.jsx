@@ -1,21 +1,41 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import DiscoverPage from "./DiscoverPage";
+import PlaceDetail from "./PlaceDetailPage";
+import PlaceDetailPage from "./PlaceDetailPage";
 
 // import "../assets/css/style.css";
 
 const HomePage = () => {
+  const [isPopupActive, setIsPopupActive] = useState(false);
+
   useEffect(() => {
     AOS.init();
   }, []);
+  const navigate = useNavigate();
+
+  const NavigateToDetails = () => {
+    navigate("/details");
+  };
   return (
     <>
-      <Nav currentPage="HomePage" headerElementId="header" />
+      <Nav
+        currentPage="HomePage"
+        headerElementId="header"
+        isPopupActive={isPopupActive}
+        setPopupActive={setIsPopupActive}
+      />
 
-      <section id="hero" className="d-flex">
+      <section
+        id="hero"
+        className={`d-flex ${isPopupActive ? "blur-background" : ""}`}
+      >
         <img
           className="mainbg"
           src={"public/image/mainbg1.png"}
@@ -249,9 +269,9 @@ const HomePage = () => {
                       <span>Massa ultricies mi quis hendrerit</span>
                     </li>
                   </ul>
-                  <a href="#" className="buy-btn">
-                    Get Started
-                  </a>
+                  <div>
+                    <button onClick={NavigateToDetails}>Get Started</button>
+                  </div>
                 </div>
               </div>
 
