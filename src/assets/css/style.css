@@ -1322,11 +1322,11 @@ section {
 
 /* Add the rest of your existing styles below */
 
-#blur.active {
-  filter: blur(50px);
+/* #blur.active{
+  filter: blur(250px);
   pointer-events: none;
   user-select: none;
-}
+  } */
 
 .blur-background {
   filter: blur(5px); /* Adjust the blur amount as needed */
@@ -1479,6 +1479,57 @@ text-color {
   font-weight: bold;
 }
 
+.main-description .hints {
+  font-size: 30px;
+  color: #0093c4;
+}
+
+.main-description .place-title {
+  font-size: 2.5rem;
+}
+
+.details-title {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #757575;
+}
+
+.buttons .block {
+  margin-right: 5px;
+}
+
+.custom-btn {
+  text-transform: capitalize;
+  background-color: #0093c4;
+  color: white;
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.custom-btn:hover {
+  background-color: #0093c4 !important;
+  font-size: 18px;
+  color: white !important;
+}
+
+.nearby-place img {
+  height: 200px;
+}
+
+.nearby-place {
+  text-align: center;
+}
+
+.nearby-place .title {
+  margin: 17px 0px 4px 0px;
+}
+
+.nearby-place .price {
+  font-weight: bold;
+}
+
 @media (max-width: 767.98px) {
   /* Make preview images responsive  */
   .previews img {
@@ -1493,6 +1544,12 @@ text-color {
 .dis .province-card:hover {
   transform: translateY(-10px);
 }
+
+/* Place Detail */
+.placedetail {
+  margin-top: 100px;
+}
+
 /* ______________ */
 /* #featured{
     max-width: 500px;
