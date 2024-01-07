@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 import { Link } from "react-router-dom";
 
-const Nav = ({ currentPage, headerElementId }) => {
+const Nav = ({ currentPage, headerElementId, isPopupActive, setPopupActive }) => {
   useEffect(() => {
     const selectHeader = document.querySelector(`#${headerElementId}`);
 
@@ -28,6 +28,7 @@ const Nav = ({ currentPage, headerElementId }) => {
     // Cleanup: Remove event listener when the component unmounts
     return () => {
       window.removeEventListener("scroll", headerScrolled);
+      document.body.style.overflow = ""; // Restore default overflow
     };
   }, [currentPage, headerElementId]);
 
@@ -39,13 +40,20 @@ const Nav = ({ currentPage, headerElementId }) => {
     var body = document.body;
 
     if (action === "close") {
+      setPopupActive(false);
+
       blur.classList.remove("active");
       popup.classList.remove("active");
       body.classList.remove("popup-active");
+      body.style.overflow = ""; // Restore default overflow
     } else {
+      setPopupActive(true);
+      
       blur.classList.add("active");
       popup.classList.add("active");
       body.classList.add("popup-active");
+      body.style.overflow = "hidden"; // Prevent scrolling
+
     }
   }
 

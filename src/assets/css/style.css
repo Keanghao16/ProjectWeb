@@ -1338,10 +1338,14 @@ section {
   
   /* Add the rest of your existing styles below */
   
-  #blur.active{
-  filter: blur(50px);
+  /* #blur.active{
+  filter: blur(250px);
   pointer-events: none;
   user-select: none;
+  } */
+
+  .blur-background {
+    filter: blur(5px); /* Adjust the blur amount as needed */
   }
   
   #popup {

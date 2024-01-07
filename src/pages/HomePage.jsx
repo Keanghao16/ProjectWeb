@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 
@@ -8,14 +9,24 @@ import "aos/dist/aos.css";
 // import "../assets/css/style.css";
 
 const HomePage = () => {
+  const [isPopupActive, setIsPopupActive] = useState(false);
+
   useEffect(() => {
     AOS.init();
   }, []);
   return (
     <>
-      <Nav currentPage="HomePage" headerElementId="header" />
+      <Nav
+        currentPage="HomePage"
+        headerElementId="header"
+        isPopupActive={isPopupActive}
+        setPopupActive={setIsPopupActive}
+      />
 
-      <section id="hero" className="d-flex">
+      <section
+        id="hero"
+        className={`d-flex ${isPopupActive ? "blur-background" : ""}`}
+      >
         <img
           className="mainbg"
           src={"public/image/mainbg1.png"}
