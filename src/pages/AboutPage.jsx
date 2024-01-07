@@ -24,42 +24,33 @@ const AboutPage = () => {
         <section id="about" className="about">
           <div className="container" data-aos="fade-up">
             <div className="section-title">
-              <h2>About Us</h2>
+              <h2>About Tripplaner</h2>
             </div>
 
             <div className="row content">
               <div className="col-lg-6">
                 <p>
-                  We're a team of aspiring individuals who have never actually
-                  traveled in our lives but spend everyday sitting in front of a
-                  computer browsing for places to put into this website.
+                  &nbsp; &nbsp;Trip Planner, the world's largest travel guidance
+                  platform, helps hundreds of millions of people each month
+                  become better travelers, from planning to taking a trip.
+                  Travelers in Cambodia should use the Trip Planner site to
+                  discover where to stay, what to do and where to eat based on
+                  guidance from those who have been there before. Travelers turn
+                  to Trip Planner to find deals on accommodations, reserve
+                  tables at delicious restaurants and discover great places
+                  nearby.
                 </p>
-                <ul>
-                  <li>
-                    <i className="ri-check-double-line"></i> I didn't sign up
-                    for this, where's the easy part{" "}
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i> I had a culture
-                    shock when I first entered the className
-                  </li>
-                  <li>
-                    <i className="ri-check-double-line"></i> I wanna kill myself
-                  </li>
-                </ul>
               </div>
               <div className="col-lg-6 pt-4 pt-lg-0">
                 <p>
-                  We're really not that advanced in terms of programming, but
-                  we're trying our best right now so please if you're reading
-                  this teacher pls pls pls give us good grades T-T we are
-                  struggling so hard rn whoever tf said univserity is fun they
-                  fucking lied cant believe i fell for it i wanna go back to
-                  elementary.
+                  &nbsp; &nbsp;Travel is not just a journey from one place to
+                  another; it's an experience that unfolds a myriad of stories
+                  and memories. In the bustling world we live in, where time is
+                  a precious commodity, the role of a trip planner becomes
+                  invaluable. A trip planner is more than a guide; it's a
+                  navigator, a storyteller, and a curator of extraordinary
+                  adventures.
                 </p>
-                <a href="#" className="btn-learn-more">
-                  Learn More
-                </a>
               </div>
             </div>
           </div>
@@ -67,27 +58,26 @@ const AboutPage = () => {
         <section id="team" className="team section-bg">
           <div className="container" data-aos="fade-up">
             <div className="section-title">
-              <h2>Team</h2>
-              <p>
-                As you can see we only have 3 people in this team, which is if
-                my math is correct, not a lot. We need help with API
-              </p>
+              <h2>Our Team</h2>
+              <p>Hello everyone, I'd like to introduce our team members</p>
             </div>
 
             <div className="row">
               <div className="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
                 <div className="member d-flex align-items-start">
                   <div className="pic">
-                    <img
-                      src="img/teammember.jpg"
-                      className="img-fluid"
-                      alt=""
-                    />
+                    <img src="public/image/nun.jpg" className="img-fluid" alt="" />
                   </div>
                   <div className="member-info">
                     <h4>Thou Sokphanun</h4>
-                    <span>Chief Executive Officer</span>
-                    <p></p>
+                    <span>Team Member</span>
+                    <p>
+                      "I'm Sokphanun, thrilled to be part of the Trip Planner
+                      team."
+                    </p>
+                    <p>
+                      <i>Nun's favorite travel destination is Kampot.</i>
+                    </p>
                     <div className="social">
                       <a href="">
                         <i className="bx bxl-twitter"></i>
@@ -99,7 +89,8 @@ const AboutPage = () => {
                         <i className="bx bxl-instagram"></i>
                       </a>
                       <a href="">
-                        <i className="bx bxl-linkedin"></i>
+                        {" "}
+                        <i className="bx bxl-linkedin"></i>{" "}
                       </a>
                     </div>
                   </div>
@@ -113,16 +104,18 @@ const AboutPage = () => {
               >
                 <div className="member d-flex align-items-start">
                   <div className="pic">
-                    <img
-                      src="img/teammember.jpg"
-                      className="img-fluid"
-                      alt=""
-                    />
+                    <img src="public/image/hao.jpg" className="img-fluid" alt="" />
                   </div>
                   <div className="member-info">
                     <h4>Tie Keanghao</h4>
-                    <span>Product Manager</span>
-                    <p>jg yy tha ot dg</p>
+                    <span>Team Member</span>
+                    <p>
+                      I'm Keanghao, absolutely thrilled to join the Trip Planner
+                      team.
+                    </p>
+                    <p>
+                      <i>Hao's favorite travel destination is Koh Kong.</i>
+                    </p>
                     <div className="social">
                       <a href="">
                         <i className="bx bxl-twitter"></i>
@@ -134,7 +127,8 @@ const AboutPage = () => {
                         <i className="bx bxl-instagram"></i>
                       </a>
                       <a href="">
-                        <i className="bx bxl-linkedin"></i>
+                        {" "}
+                        <i className="bx bxl-linkedin"></i>{" "}
                       </a>
                     </div>
                   </div>
@@ -148,16 +142,18 @@ const AboutPage = () => {
               >
                 <div className="member d-flex align-items-start">
                   <div className="pic">
-                    <img
-                      src="img/teammember.jpg"
-                      className="img-fluid"
-                      alt=""
-                    />
+                    <img src="public/image/lily.jpg" className="img-fluid" alt="" />
                   </div>
                   <div className="member-info">
                     <h4>Thon Ratha</h4>
-                    <span>CTO</span>
-                    <p>jg yy thaaaaaaaaaaaaaaaaaaaaa</p>
+                    <span>Team Member</span>
+                    <p>
+                      I'm Ratha, and I couldn't be more thrilled to join the
+                      Trip Planner team.
+                    </p>
+                    <p>
+                      <i>Ratha's favorite travel destination is Mondulkiri.</i>
+                    </p>
                     <div className="social">
                       <a href="">
                         <i className="bx bxl-twitter"></i>
@@ -169,7 +165,8 @@ const AboutPage = () => {
                         <i className="bx bxl-instagram"></i>
                       </a>
                       <a href="">
-                        <i className="bx bxl-linkedin"></i>
+                        {" "}
+                        <i className="bx bxl-linkedin"></i>{" "}
                       </a>
                     </div>
                   </div>

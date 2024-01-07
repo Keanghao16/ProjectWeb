@@ -1511,6 +1511,20 @@ text-color {
 }
 
 
+.dis .province-card {
+  transition: 0.5s;
+}
+.dis .province-card:hover {
+  transform: translateY(-10px);
+}
+
+
+
+/* Place Detail */
+.placedetail {
+  margin-top: 100px;
+}
+
 /* ______________ */
 /* #featured{
     max-width: 500px;
