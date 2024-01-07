@@ -1,37 +1,78 @@
 import React, { useEffect } from "react";
+
 import { Link } from "react-router-dom";
-import "../assets/css/style.css";
 
-const Nav = () => {
+const Nav = ({ currentPage, headerElementId }) => {
   useEffect(() => {
-    const selectHeader = document.querySelector("#header");
+    const selectHeader = document.querySelector(`#${headerElementId}`);
 
-    if (selectHeader) {
-      const headerScrolled = () => {
+    const headerScrolled = () => {
+      if (currentPage === "HomePage") {
         if (window.scrollY > 100) {
           selectHeader.classList.add("header-scrolled");
         } else {
           selectHeader.classList.remove("header-scrolled");
         }
-      };
+      } else {
+        // For pages other than HomePage, always add the class
+        selectHeader.classList.add("header-scrolled");
+      }
+    };
 
-      window.addEventListener("load", headerScrolled);
-      window.addEventListener("scroll", headerScrolled);
+    // Call headerScrolled manually when the currentPage changes
+    headerScrolled();
 
-      return () => {
-        // Cleanup: Remove event listeners when the component unmounts
-        window.removeEventListener("load", headerScrolled);
-        window.removeEventListener("scroll", headerScrolled);
-      };
+    // Add event listeners
+    window.addEventListener("scroll", headerScrolled);
+
+    // Cleanup: Remove event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", headerScrolled);
+    };
+  }, [currentPage, headerElementId]);
+
+  // Mobile Nav Toggle
+
+  function toggle(action) {
+    var blur = document.getElementById("blur");
+    var popup = document.getElementById("popup");
+    var body = document.body;
+
+    if (action === "close") {
+      blur.classList.remove("active");
+      popup.classList.remove("active");
+      body.classList.remove("popup-active");
+    } else {
+      blur.classList.add("active");
+      popup.classList.add("active");
+      body.classList.add("popup-active");
     }
-  }, []);
+  }
+
+  // close the popup when clicking outside and ESC key
+  document.addEventListener("click", function (event) {
+    var popup = document.getElementById("popup");
+    var blur = document.getElementById("blur");
+
+    if (!popup.contains(event.target) && !blur.contains(event.target)) {
+      toggle("close");
+    }
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      toggle("close");
+    }
+  });
+  
+
   return (
     <>
       <div id="blur">
         <header id="header" className="fixed-top">
           <div className="container d-flex align-items-center justify-content-between">
             <h1 className="logo me-auto">
-              <a href="index.html">
+              <a href="/">
                 <img src={"public/image/triplogo.png"} alt="Logo" />
               </a>
             </h1>
@@ -39,17 +80,32 @@ const Nav = () => {
               <div className="container d-flex justify-content-evenly">
                 <ul>
                   <li>
-                    <Link to="/" className="nav-link scrollto">
+                    <Link
+                      to="/"
+                      className={`nav-link scrollto ${
+                        location.pathname === "/" && "active"
+                      }`}
+                    >
                       Home
                     </Link>
                   </li>
                   <li>
-                    <Link to="/discover" className="nav-link scrollto">
+                    <Link
+                      to="/discover"
+                      className={`nav-link scrollto ${
+                        location.pathname === "/discover" && "active"
+                      }`}
+                    >
                       Discover
                     </Link>
                   </li>
                   <li>
-                    <Link to="/about" className="nav-link scrollto">
+                    <Link
+                      to="/about"
+                      className={`nav-link scrollto ${
+                        location.pathname === "/about" && "active"
+                      }`}
+                    >
                       About
                     </Link>
                   </li>

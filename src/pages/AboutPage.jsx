@@ -11,7 +11,7 @@ const AboutPage = () => {
   }, []);
   return (
     <>
-      <Nav />
+      <Nav currentPage="AboutPage" headerElementId="header" />
 
       <section id="about" className="about">
         <div className="container" data-aos="fade-up">
@@ -124,7 +124,11 @@ const AboutPage = () => {
               </div>
             </div>
 
-            <div className="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="300">
+            <div
+              className="col-lg-6 mt-4"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
               <div className="member d-flex align-items-start">
                 <div className="pic">
                   <img src="img/teammember.jpg" className="img-fluid" alt="" />

@@ -3,7 +3,6 @@ import Nav from "../components/Nav";
 
 import Province from "../data/Province.json";
 
-
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -14,7 +13,7 @@ const DiscoverPage = () => {
 
   return (
     <>
-      <Nav />
+      <Nav currentPage="DiscoverPage" headerElementId="header" />
       <main id="main">
         <section id="about" className="about">
           <div className="container discovertitle" data-aos="fade-up">
