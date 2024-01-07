@@ -6,8 +6,6 @@ import Footer from "../components/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// import "../assets/css/style.css";
-
 const HomePage = () => {
   const [isPopupActive, setIsPopupActive] = useState(false);
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import Nav from "../components/Nav";
-
+import Footer from "../components/Footer";
 import Province from "../data/Province.json";
 
 import AOS from "aos";
@@ -64,6 +64,7 @@ const DiscoverPage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
