@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import "../assets/css/style.css";
 
 const Nav = ({
   currentPage,
@@ -37,13 +38,12 @@ const Nav = ({
       document.body.style.overflow = ""; // Restore default overflow
     };
   }, [currentPage, headerElementId]);
+
   const navigate = useNavigate();
 
   const NavigateToHome = () => {
     navigate("/");
   };
-
-  // Mobile Nav Toggle
 
   function toggle(action) {
     var blur = document.getElementById("blur");
@@ -91,7 +91,10 @@ const Nav = ({
                 <img src={"public/image/triplogo.png"} alt="Logo" />
               </a>
             </h1>
-            <nav id="navbar" className="navbar">
+            <nav
+              id="navbar"
+              className={`navbar ${isNavbarMobile ? "navbar-mobile" : ""}`}
+            >
               <div className="container d-flex justify-content-evenly">
                 <ul>
                   <li>
@@ -135,7 +138,7 @@ const Nav = ({
                   </li>
                 </ul>
               </div>
-              <i className="bi bi-list mobile-nav-toggle"></i>
+              <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
             <div
               id="dropdown"
