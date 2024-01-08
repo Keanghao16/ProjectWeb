@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "img": "public/image/PhnomPenh.jpg",
+    "province": "Phnom Penh",
+    "description": "Phnom Penh is the capital and most populous city of Cambodia. Phnom Penh, after years... See more"
+  },
+  {
+    "id": 2,
+    "img": "public/image/SiemReap.jpg",
+    "province": "Siem Reap",
+    "description": "As the gateway to the magnificent temples of Angkor, Siem Reap is sitting on Southeast... See more"
+  },
+  {
+    "id": 3,
+    "img": "public/image/PreahVihear.jpg",
+    "province": "Preah Vihear",
+    "description": "Prasat Preah Vihear is the compound of words Prasat, Preah and Vihear, which mean... See more"
+  },
+  {
+    "id": 4,
+    "img": "public/image/Battambang.jpg",
+    "province": "Battambang",
+    "description": "Want to see the real Cambodia? Come to Battambang. While Battambang is the ... See more"
+  },
+  {
+    "id": 5,
+    "img": "public/image/Kampot.jpg",
+    "province": "Kampot",
+    "description": "Kampot one of Cambodia's most attractive old towns. Famous for its pepper, Kampot supplied... See more"
+  },
+  {
+    "id": 6,
+    "img": "public/image/Mondulkiri.jpg",
+    "province": "Mondulkiri",
+    "description": "Mondulkiri is a province in eastern Cambodia. It is known for its lush forests, rolling hills, and ... See more"
+  },
+  {
+    "id": 7,
+    "img": "public/image/KohKong.jpg",
+    "province": "Koh Kong",
+    "description": "Khemarak Phoumin, also Koh Kong, is the capital and largest city of Koh Kong ... See more"
+  },
+  {
+    "id": 8,
+    "img": "public/image/StungTreng.jpg",
+    "province": "Stung Treng",
+    "description": "Stung Treng is a province located in the northeastern part of Cambodia, bordering Laos. It is ... See more"
+  }
+]

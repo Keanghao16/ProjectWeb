@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
-import Province from "../data/Province.json";
+import Discover from "../data/DIscover.json";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -39,22 +39,25 @@ const DiscoverPage = () => {
 
         <div className="container dis">
           <div className="row gy-3 my-3">
-            {Province &&
-              Province.map((province) => (
-                <div className="col-sm-6 col-md-4 col-lg-3 province-card" key={province.id}>
-                  <a href="#" className="card-link">
+            {Discover &&
+              Discover.map((Discover) => (
+                <div
+                  className="col-sm-6 col-md-4 col-lg-3 Discover-card"
+                  key={Discover.id}
+                >
+                  <a href="#" className="card-link" >
                     <div className="card" data-aos="zoom-out">
                       <img
-                        src={province.img}
+                        src={Discover.img}
                         className="card-img-top card-img-fixed"
-                        alt={`Province ${province.province}`}
+                        alt={`Discover ${Discover.Discover}`}
                       />
                       <div className="card-body">
-                        <h5 className="card-title province">
-                          {province.province}
+                        <h5 className="card-title Discover">
+                          <b>{Discover.Discover}</b>
                         </h5>
                         <p className="card-text description">
-                          {province.description}
+                          {Discover.description}
                         </p>
                       </div>
                     </div>

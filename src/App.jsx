@@ -1,29 +1,37 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 
-import Home from "./pages/HomePage";
-import About from "./pages/AboutPage";
-import Discover from "./pages/DiscoverPage";
-import PlaceDetail from "./pages/PlaceDetailPage"
+import HomePage from "./pages/HomePage";
+import DiscoverPage from "./pages/DiscoverPage";
+import AboutPage from "./pages/AboutPage";
+
+import PlaceDetailPage from "./pages/PlaceDetailPage"
+import PlaceListPage from "./pages/PlaceListPage";
+import PlaceList from "./components/PlaceList";
+
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home />,
+      element: <HomePage />,
     },
     {
       path: "/discover",
-      element: <Discover/>,
+      element: <DiscoverPage/>,
     },
     {
       path: "/about",
-      element: <About />,
+      element: <AboutPage />,
     },
     {
       path: "/placedetail",
-      element: <PlaceDetail />,
+      element: <PlaceDetailPage />,
     },
+    {
+      path: "/placelist",
+      element: <PlaceListPage />
+    }
 
   ]);
 

@@ -1,0 +1,34 @@
+{
+  "KohKong": {
+    "TataiWaterfall": [
+      {
+        "name": "Tatai Waterfall",
+        "image": "public/image/sr.jpg",
+        "description": "description"
+      }
+    ],
+    "Tatai ": [
+      {
+        "name": "Tatai Waterfall",
+        "image": "public/image/island1.jpg",
+        "description": "description"
+      }
+    ]
+  },
+  "PhnomPenh": {
+    "Tatai Waterfall": [
+      {
+        "name": "Tatai Waterfall",
+        "image": "public/image/island1.jpg",
+        "description": "description"
+      }
+    ],
+    "Tatai ": [
+      {
+        "name": "Tatai Waterfall",
+        "image": "public/image/island1.jpg",
+        "description": "description"
+      }
+    ]
+  }
+}

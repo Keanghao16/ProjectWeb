@@ -1519,6 +1519,17 @@ text-color {
 }
 
 
+/* PLACE LIST */
+
+.card {
+  margin-top: 30px;
+}
+.text-center h1.text-success {
+  color: black !important;
+}
+.card-img-top {
+  height: 300px; /* Adjust the height as needed */
+}
 
 /* Place Detail */
 .placedetail {
