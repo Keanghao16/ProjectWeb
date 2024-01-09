@@ -113,48 +113,36 @@ const HomePage = () => {
                 <h3>Siem Reap</h3>
                 <p>
                   <i>Five Fact about Siem Reap Province</i>
-                  <ul>
-                    <li>
-                      <i className="bi bi-check"></i>{" "}
-                      <span>
-                        Siem Reap is a city located in northwestern Cambodia.
-                      </span>
-                    </li>
-                    <li>
-                      <i className="bi bi-check"></i>
-                      <span>
-                        It is famous for being the gateway to the ancient
-                        temples of Angkor, including the iconic Angkor Wat.
-                      </span>
-                    </li>
-                    <li>
-                      <i className="bi bi-check"></i>
-                      <span>
-                        Siem Reap has a vibrant and bustling night market where
-                        visitors can shop for souvenirs, handicrafts, and sample
-                        local cuisine.
-                      </span>
-                      .
-                    </li>
-                    <li>
-                      <i className="bi bi-check"></i>
-                      <span>
-                        The city is home to the Angkor National Museum, which
-                        displays artifacts and exhibits about the history and
-                        culture of the Angkor civilization.
-                      </span>
-                    </li>
-                    <li>
-                      <i className="bi bi-check">
-                        <span>
-                          Siem Reap has a tropical climate with a distinct wet
-                          and dry season, making it best to visit during the
-                          cooler months from November to February.
-                        </span>
-                      </i>
-                    </li>
-                  </ul>
                 </p>
+                <ul>
+                  <li>
+                    <i className="bi bi-check"></i> Siem Reap is a city located
+                    in northwestern Cambodia.
+                  </li>
+                  <li>
+                    <i className="bi bi-check"></i>
+                    It is famous for being the gateway to the ancient temples of
+                    Angkor, including the iconic Angkor Wat.
+                  </li>
+                  <li>
+                    <i className="bi bi-check"></i>
+                    Siem Reap has a vibrant and bustling night market where
+                    visitors can shop for souvenirs, handicrafts, and sample
+                    local cuisine.
+                  </li>
+                  <li>
+                    <i className="bi bi-check"></i>
+                    The city is home to the Angkor National Museum, which
+                    displays artifacts and exhibits about the history and
+                    culture of the Angkor civilization.
+                  </li>
+                  <li>
+                    <i className="bi bi-check"></i>
+                    Siem Reap has a tropical climate with a distinct wet and dry
+                    season, making it best to visit during the cooler months
+                    from November to February.
+                  </li>
+                </ul>
               </div>
               <div
                 className="col-lg-7 order-1 order-lg-2 d-flex align-items-center"
@@ -198,40 +186,29 @@ const HomePage = () => {
                 </p>
                 <ul>
                   <li>
-                    <i className="bi bi-check"></i>{" "}
-                    <span>
-                      Koh Kong is a province located in southwestern Cambodia.
-                    </span>
+                    <i className="bi bi-check"></i>
+                    Koh Kong is a province located in southwestern Cambodia.
                   </li>
                   <li>
                     <i className="bi bi-check"></i>
-                    <span>
-                      It is known for its stunning natural beauty, including
-                      pristine beaches and lush rainforests.
-                    </span>
+                    It is known for its stunning natural beauty, including
+                    pristine beaches and lush rainforests.
                   </li>
                   <li>
                     <i className="bi bi-check"></i>
-                    <span>
-                      The province is home to the largest national park in
-                      Cambodia, the Cardamom Mountains Protected Forest.
-                    </span>
-                    .
+                    The province is home to the largest national park in
+                    Cambodia, the Cardamom Mountains Protected Forest.
                   </li>
                   <li>
                     <i className="bi bi-check"></i>
-                    <span>
-                      Koh Kong is a popular eco-tourism destination, offering
-                      activities such as jungle trekking, wildlife spotting, and
-                      kayaking.
-                    </span>
+                    Koh Kong is a popular eco-tourism destination, offering
+                    activities such as jungle trekking, wildlife spotting, and
+                    kayaking.
                   </li>
                   <li>
                     <i className="bi bi-check"></i>
-                    <span>
-                      The province shares a border with Thailand and is a
-                      gateway for travelers crossing between the two countries.
-                    </span>
+                    The province shares a border with Thailand and is a gateway
+                    for travelers crossing between the two countries.
                   </li>
                 </ul>
               </div>
@@ -293,7 +270,7 @@ const HomePage = () => {
                     <i className="bx bx-chevron-down icon-show"></i>
                     <i className="bx bx-chevron-up icon-close"></i>
                   </a>
-                  <div
+                  <ul
                     id="faq-list-1"
                     className="collapse show"
                     data-bs-parent=".faq-list"
@@ -304,7 +281,7 @@ const HomePage = () => {
                       you can enjoy clear skies and explore the attractions
                       comfortably.
                     </li>
-                  </div>
+                  </ul>
                 </li>
 
                 <li data-aos="fade-up" data-aos-delay="200">
@@ -318,7 +295,7 @@ const HomePage = () => {
                     <i className="bx bx-chevron-down icon-show"></i>
                     <i className="bx bx-chevron-up icon-close"></i>
                   </a>
-                  <div
+                  <ul
                     id="faq-list-2"
                     className="collapse"
                     data-bs-parent=".faq-list"
@@ -330,7 +307,7 @@ const HomePage = () => {
                       Restaurant. These establishments offer a variety of
                       culinary experiences to satisfy your taste buds.
                     </li>
-                  </div>
+                  </ul>
                 </li>
 
                 <li data-aos="fade-up" data-aos-delay="300">
@@ -344,7 +321,7 @@ const HomePage = () => {
                     <i className="bx bx-chevron-down icon-show"></i>
                     <i className="bx bx-chevron-up icon-close"></i>
                   </a>
-                  <div
+                  <ul
                     id="faq-list-3"
                     className="collapse"
                     data-bs-parent=".faq-list"
@@ -362,7 +339,7 @@ const HomePage = () => {
                       Chrey Thom Waterfall, and enjoying the vibrant Sen Monorom
                       Market.
                     </li>
-                  </div>
+                  </ul>
                 </li>
 
                 <li data-aos="fade-up" data-aos-delay="400">
@@ -376,7 +353,7 @@ const HomePage = () => {
                     <i className="bx bx-chevron-down icon-show"></i>
                     <i className="bx bx-chevron-up icon-close"></i>
                   </a>
-                  <div
+                  <ul
                     id="faq-list-4"
                     className="collapse"
                     data-bs-parent=".faq-list"
@@ -392,7 +369,7 @@ const HomePage = () => {
                       These restaurants offer a delightful culinary journey
                       through the tastes of Cambodia.
                     </li>
-                  </div>
+                  </ul>
                 </li>
 
                 <li data-aos="fade-up" data-aos-delay="500">
@@ -406,7 +383,7 @@ const HomePage = () => {
                     <i className="bx bx-chevron-down icon-show"></i>
                     <i className="bx bx-chevron-up icon-close"></i>
                   </a>
-                  <div
+                  <ul
                     id="faq-list-5"
                     className="collapse"
                     data-bs-parent=".faq-list"
@@ -418,7 +395,7 @@ const HomePage = () => {
                       renting a motorbike or bicycle for exploring the
                       countryside.
                     </li>
-                  </div>
+                  </ul>
                 </li>
               </ul>
             </div>
