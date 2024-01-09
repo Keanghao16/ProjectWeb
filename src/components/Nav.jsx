@@ -11,7 +11,7 @@ const Nav = ({
   setPopupActive,
 }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
-
+  const thisPage = currentPage;
   const handleToggle = () => {
     setIsNavOpen(!isNavOpen);
   };
@@ -90,7 +90,13 @@ const Nav = ({
       <div id="blur">
         <header
           id="header"
-          className={`fixed-top ${isNavOpen ? "header-scrolled" : ""}`}
+          className={`fixed-top ${
+            thisPage === "DiscoverPage"
+              ? "header-scrolled"
+              : thisPage === "AboutPage"
+              ? "header-scrolled"
+              : ""
+          } ${isNavOpen ? "header-scrolled" : ""} `}
         >
           <div className="container">
             <nav

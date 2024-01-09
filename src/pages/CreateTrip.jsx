@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import InnerNav from "../components/InnerNav";
 import InnerFooter from "../components/InnerFooter";
@@ -7,8 +7,13 @@ import "../assets/css/form.css";
 import "../assets/css/innerfooter.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { MenuOpen } from "@mui/icons-material";
 
 const CreateTrip = () => {
+  const [place, setPlace] = useState();
+  const [duration, setDuration] = useState();
+  const [people, setPeople] = useState();
+  const [money, setMoney] = useState();
   useEffect(() => {
     AOS.init();
   }, []);
@@ -25,7 +30,12 @@ const CreateTrip = () => {
             </h3>
             <div class="question">
               <p>Where do you want to go?</p>
-              <select class="form-select" aria-label=" select example">
+              <select
+                class="form-select"
+                aria-label=" select example"
+                value={place}
+                onChange={(e) => setPlace(e.target.value)}
+              >
                 <option value="1" class="option">
                   <i>Koh Kong</i>
                 </option>
@@ -39,10 +49,16 @@ const CreateTrip = () => {
                   Kampot
                 </option>
               </select>
+              <p>{place}</p>
             </div>
             <div class="question">
               <p>How long do you want to stay?</p>
-              <select class="form-select" aria-label=" select example">
+              <select
+                class="form-select"
+                aria-label=" select example"
+                value={duration}
+                onChange={(e) => setDuration(e.target.value)}
+              >
                 <option value="1" class="option">
                   1 Day
                 </option>
@@ -56,10 +72,16 @@ const CreateTrip = () => {
                   1 Week
                 </option>
               </select>
+              <p>{duration}</p>
             </div>
             <div class="question">
-              <p>How many people are you going?</p>
-              <select class="form-select" aria-label=" select example">
+              <p>How many people are you going with?</p>
+              <select
+                class="form-select"
+                aria-label=" select example"
+                value={people}
+                onChange={(e) => setPeople(e.target.value)}
+              >
                 <option value="1" class="option">
                   1
                 </option>
@@ -73,10 +95,16 @@ const CreateTrip = () => {
                   4+
                 </option>
               </select>
+              <p>{people}</p>
             </div>
             <div class="question">
               <p>How much would you like to spend?</p>
-              <select class="form-select" aria-label=" select example">
+              <select
+                class="form-select"
+                aria-label=" select example"
+                value={money}
+                onChange={(e) => setMoney(e.target.value)}
+              >
                 <option value="1" class="option">
                   50$
                 </option>
@@ -90,6 +118,7 @@ const CreateTrip = () => {
                   200+$
                 </option>
               </select>
+              <p>{money}</p>
             </div>
             <div className="bruh" align="center">
               <button type="button" class="btn btn-danger btn-sm">
