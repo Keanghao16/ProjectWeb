@@ -21,7 +21,7 @@ const HomePage = () => {
   const navigate = useNavigate();
 
   const NavigateToDetails = () => {
-    navigate("/details");
+    navigate("/createtrip");
   };
   return (
     <>
@@ -59,7 +59,7 @@ const HomePage = () => {
                   be fun and tailored just for you!
                 </p>
 
-                <a href="tripplan.html" className="btn">
+                <a onClick={NavigateToDetails} className="btn">
                   Get Started
                 </a>
               </div>

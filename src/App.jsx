@@ -4,6 +4,7 @@ import Home from "./pages/HomePage";
 import About from "./pages/AboutPage";
 import Discover from "./pages/DiscoverPage";
 import PlaceDetail from "./pages/PlaceDetailPage";
+import CreateTrip from "./pages/CreateTrip";
 
 function App() {
   const router = createBrowserRouter([
@@ -23,6 +24,10 @@ function App() {
     {
       path: "/details",
       element: <PlaceDetail />,
+    },
+    {
+      path: "/createtrip",
+      element: <CreateTrip />,
     },
   ]);
 

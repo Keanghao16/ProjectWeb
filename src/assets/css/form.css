@@ -1,0 +1,25 @@
+* {
+  font-family: sans-serif;
+}
+
+.option {
+  font-style: italic;
+  color: gray;
+}
+
+.question p {
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+.btn-danger {
+  margin-top: 30px;
+}
+
+i {
+  font-weight: 400;
+  font-size: 15px;
+}
+.right {
+  align-items: center;
+}
