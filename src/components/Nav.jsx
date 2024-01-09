@@ -1,8 +1,21 @@
 import React, { useEffect } from "react";
+import GoogleButton from "react-google-button";
+// import { auth, googleAuthProvider } from "./Signin";
+import { signInWithPopup, signOut } from "firebase/auth";
+
+import { auto, googleAuthProvider } from "./Signin";
 
 import { Link } from "react-router-dom";
 
-const Nav = ({ currentPage, headerElementId, isPopupActive, setPopupActive }) => {
+const Nav = ({
+  currentPage,
+  headerElementId,
+  isPopupActive,
+  setPopupActive,
+}) => {
+  const [isLoggedIn, setIsLoggedIn] = React.useState(
+    localStorage.getItem("isLoggedIn") === "true"
+  );
   useEffect(() => {
     const selectHeader = document.querySelector(`#${headerElementId}`);
 
@@ -48,12 +61,11 @@ const Nav = ({ currentPage, headerElementId, isPopupActive, setPopupActive }) =>
       body.style.overflow = ""; // Restore default overflow
     } else {
       setPopupActive(true);
-      
+
       blur.classList.add("active");
       popup.classList.add("active");
       body.classList.add("popup-active");
       body.style.overflow = "hidden"; // Prevent scrolling
-
     }
   }
 
@@ -72,7 +84,41 @@ const Nav = ({ currentPage, headerElementId, isPopupActive, setPopupActive }) =>
       toggle("close");
     }
   });
-  
+
+  //SignIN
+
+  const handleSignInWithGoogle = async () => {
+    try {
+      const result = await signInWithPopup(auto, googleAuthProvider);
+      console.log(result);
+      localStorage.setItem("token", result.user.accessToken);
+      localStorage.setItem("user", JSON.stringify(result.user));
+      localStorage.setItem("isLoggedIn", "true");
+
+      toggle("close");
+      setIsLoggedIn(true);
+
+      console.log("SignIN Sucessfully");
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const user = JSON.parse(localStorage.getItem("user"));
+  const handleLogout = async () => {
+    try {
+      await signOut(auto);
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+      localStorage.setItem("isLoggedIn", "false");
+
+      setIsLoggedIn(false);
+
+      console.log("SignOut Sucessfully");
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <>
@@ -117,38 +163,46 @@ const Nav = ({ currentPage, headerElementId, isPopupActive, setPopupActive }) =>
                       About
                     </Link>
                   </li>
-                  <li>
-                    <a
-                      className="loginsignups nav-link scrollto signinBTN"
-                      href="#"
-                      onClick={() => toggle()}
-                    >
-                      Sign In
-                    </a>
-                  </li>
+                  {!isLoggedIn && (
+                    <li>
+                      <button
+                        className="loginsignups nav-link scrollto visible"
+                        onClick={() => toggle()}
+                      >
+                        Sign In
+                      </button>
+                    </li>
+                  )}
                 </ul>
               </div>
               <i className="bi bi-list mobile-nav-toggle"></i>
             </nav>
             <div
               id="dropdown"
-              className="dropdown text-end mx-5"
-              style={{ display: "none" }}
+              className={`dropdown text-end mx-5 ${
+                isLoggedIn ? "visible" : "hidden"
+              }`}
             >
-              <img
-                src=""
-                alt="profile"
-                className="imgProfile dropdown-toggle rounded-circle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              />
+              {user && (
+                <img
+                  src={user.photoURL}
+                  alt="profile"
+                  className="imgProfile dropdown-toggle rounded-circle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                />
+              )}
 
               <ul className="dropdown-menu">
-                <label className="dropdown-item name disabled"></label>
-                <label className="dropdown-item email disabled"></label>
+                <label className="dropdown-item disabled">
+                  {user && user.displayName}
+                </label>
+                <label className="dropdown-item disabled">
+                  {user && user.email}
+                </label>
                 <li className="dropdown-item">My Favorite</li>
-                <li className="dropdown-item" onClick={() => signOut()}>
+                <li className="dropdown-item" onClick={handleLogout}>
                   Sign Out
                 </li>
               </ul>
@@ -182,7 +236,7 @@ const Nav = ({ currentPage, headerElementId, isPopupActive, setPopupActive }) =>
               </label>
             </div>
 
-            <div id="google-button" className="mt-5"></div>
+            <GoogleButton className="mt-5 mx-5 rounded-2" onClick={handleSignInWithGoogle} />
           </div>
         </div>
       </div>

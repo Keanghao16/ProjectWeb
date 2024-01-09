@@ -5,12 +5,12 @@ const PlaceList = ({ Province, isPopupActive }) => {
     <div className={`container ${isPopupActive ? "blur-background" : ""}`}>
       <div className="my-4 text-center">
         <h1 className="text-success">Koh Kong Destination</h1>
-        <strong>Best Places to expore in Koh Kong</strong>
+        <strong>Best Places to explore in Koh Kong</strong>
       </div>
       {Object.keys(Province).map((place) => (
         <div key={place}>
-          {Province[place].map((item) => (
-            <div className="col-8 offset-2">
+          {Province[place].map((item, index) => (
+            <div key={index} className="col-8 offset-2">
               <div className="card">
                 <div className="row g-0">
                   <div className="col-md-5">

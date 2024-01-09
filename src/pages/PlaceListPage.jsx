@@ -5,7 +5,6 @@ import PlaceList from "../components/PlaceList";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import "../assets/css/style.css";
 import { KohKong, PhnomPenh } from "../data/PlaceList.json";
 
 const PlaceListPage = () => {
@@ -17,12 +16,12 @@ const PlaceListPage = () => {
 
   return (
     <>
-      <Nav
+      {/* <Nav
         currentPage="DiscoverPage"
         headerElementId="header"
         isPopupActive={isPopupActive}
         setPopupActive={setIsPopupActive}
-      />
+      /> */}
 
       <PlaceList Province={KohKong} isPopupActive={isPopupActive} />
     </>
