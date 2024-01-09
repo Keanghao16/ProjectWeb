@@ -10,6 +10,11 @@ const Nav = ({
   isPopupActive,
   setPopupActive,
 }) => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsNavOpen(!isNavOpen);
+  };
   useEffect(() => {
     const selectHeader = document.querySelector(`#${headerElementId}`);
 
@@ -40,7 +45,6 @@ const Nav = ({
   }, [currentPage, headerElementId]);
 
   const navigate = useNavigate();
-
   const NavigateToHome = () => {
     navigate("/");
   };
@@ -84,7 +88,10 @@ const Nav = ({
   return (
     <>
       <div id="blur">
-        <header id="header" className="fixed-top">
+        <header
+          id="header"
+          className={`fixed-top ${isNavOpen ? "header-scrolled" : ""}`}
+        >
           <div className="container">
             <nav
               id="navbar"
@@ -102,8 +109,9 @@ const Nav = ({
                   data-bs-toggle="collapse"
                   data-bs-target="#navbarSupportedContent"
                   aria-controls="navbarSupportedContent"
-                  aria-expanded="false"
+                  aria-expanded={isNavOpen ? "true" : "false"}
                   aria-label="Toggle navigation"
+                  onClick={handleToggle}
                 >
                   <span class="navbar-toggler-icon"></span>
                 </button>

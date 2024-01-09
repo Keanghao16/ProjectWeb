@@ -4,6 +4,7 @@ import InnerNav from "../components/InnerNav";
 import InnerFooter from "../components/InnerFooter";
 import { Link } from "react-router-dom";
 import "../assets/css/form.css";
+import "../assets/css/innerfooter.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -12,7 +13,7 @@ const CreateTrip = () => {
     AOS.init();
   }, []);
   return (
-    <>
+    <div className="App">
       <InnerNav currentPage="CreatTrip" headerElementId="header" />
       <section className="inner-page">
         <div className="container d-flex justify-content-center">
@@ -98,8 +99,10 @@ const CreateTrip = () => {
           </div>
         </div>
       </section>
-      <InnerFooter />
-    </>
+      <div className="kdmv">
+        <InnerFooter />
+      </div>
+    </div>
   );
 };
 

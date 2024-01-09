@@ -1,0 +1,11 @@
+.icon-container {
+  cursor: pointer;
+}
+
+.backicon {
+  transition: color 0.9s ease;
+}
+
+.backicon:hover {
+  color: #eeb118;
+}

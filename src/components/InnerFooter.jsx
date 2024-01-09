@@ -21,7 +21,7 @@ const InnerFooter = () => {
           . All Rights Reserved
         </div>
         <div className="credits">
-          Designed by <a href="#">Your BoY SaTuRn</a>
+          TRIP PLAN <a href="#">CO.</a>
         </div>
       </div>
     </div>
