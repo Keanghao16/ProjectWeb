@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Nav from "../components/Nav";
 import PlaceDetail from "../components/PlaceDetail";
-
+import Comments from "../components/comment";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -25,6 +25,8 @@ const PlaceDetailPage = () => {
       />
 
       <PlaceDetail place={PhnomPenh} isPopupActive={isPopupActive} />
+
+      {/* <Comments /> */}
 
     </>
   );

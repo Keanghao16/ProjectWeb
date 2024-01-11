@@ -1511,10 +1511,10 @@ text-color {
 }
 
 
-.dis .province-card {
+.dis .Discover-card {
   transition: 0.5s;
 }
-.dis .province-card:hover {
+.dis .Discover-card:hover {
   transform: translateY(-10px);
 }
 

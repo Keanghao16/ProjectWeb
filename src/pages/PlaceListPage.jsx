@@ -7,6 +7,14 @@ import "aos/dist/aos.css";
 
 import { KohKong, PhnomPenh } from "../data/PlaceList.json";
 
+
+
+const Province = ({nameProvince, setnameProvince}) => {
+  
+}
+
+
+
 const PlaceListPage = () => {
   const [isPopupActive, setIsPopupActive] = useState(false);
 
