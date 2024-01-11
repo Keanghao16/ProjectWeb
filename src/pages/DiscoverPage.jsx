@@ -54,7 +54,7 @@ const DiscoverPage = () => {
                       />
                       <div className="card-body">
                         <h5 className="card-title Discover">
-                          <b>{Discover.Discover}</b>
+                          <b>{Discover.province}</b>
                         </h5>
                         <p className="card-text description">
                           {Discover.description}
