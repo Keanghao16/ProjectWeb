@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import LocationBTN from "../../components/LocationBTN";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -87,13 +87,11 @@ const Placedetail = () => {
                 <div class="buttons d-flex my-5">
                   <div class="block">
                     <a href="#" class="shadow btn custom-btn ">
-                      <i class="fa-regular fa-heart"></i> favorite
+                    <i class="bi bi-heart-fill"></i> favorite
                     </a>
                   </div>
                   <div class="block">
-                    <button class="shadow btn custom-btn">
-                      <i class="fa-solid fa-location-dot"></i> Location
-                    </button>
+                    <LocationBTN url="https://maps.app.goo.gl/Q4UrgHXMDEN4m73X7" />
                   </div>
                 </div>
               </div>

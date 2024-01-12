@@ -6,9 +6,6 @@ import AboutPage from "./pages/AboutPage";
 
 import PhnomPenh from "./pages/ListPage/PhnomPenh";
 import SiemReap from "./pages/ListPage/SiemReap";
-
-import PlaceListPage from "./pages/PlaceListPage";
-
 import Placedetail from "./pages/DetailPage/Placedetail";
 import PreahVihear from "./pages/ListPage/PreahVihear";
 import Battambang from "./pages/ListPage/Battambang";
@@ -17,7 +14,7 @@ import Mondulkiri from "./pages/ListPage/Mondulkiri";
 import KohKong from "./pages/ListPage/KohKong";
 import StungTreng from "./pages/ListPage/StungTreng";
 
-
+import PlaceDetailPage from "./pages/PlaceDetailPage";
 
 function App() {
   const router = createBrowserRouter([
