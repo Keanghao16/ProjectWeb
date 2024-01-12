@@ -30,8 +30,9 @@ function App() {
       element: <PlaceDetailPage />,
     },
   ]);
-
+  // onclick ={() => history.back()}
   return <RouterProvider router={router} />;
+  
 }
 
 export default App;

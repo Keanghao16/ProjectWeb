@@ -9,10 +9,6 @@ import { KohKong, PhnomPenh } from "../data/PlaceList.json";
 
 
 
-const Province = ({nameProvince, setnameProvince}) => {
-  
-}
-
 
 
 const PlaceListPage = () => {
@@ -24,12 +20,12 @@ const PlaceListPage = () => {
 
   return (
     <>
-      {/* <Nav
+      <Nav
         currentPage="DiscoverPage"
         headerElementId="header"
         isPopupActive={isPopupActive}
         setPopupActive={setIsPopupActive}
-      /> */}
+      />
 
       <PlaceList Province={KohKong} isPopupActive={isPopupActive} />
     </>
