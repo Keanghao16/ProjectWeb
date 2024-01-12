@@ -169,7 +169,10 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover > a {
-  color: #e6ae17;
+  color: #fab700;
+}
+.collapse .active {
+  color: #fab700;
 }
 
 .navbar .loginsignups,
@@ -1288,7 +1291,8 @@ body.popup-active #popup {
 
 /* ---------- */
 .dropdown-item {
-  cursor: pointer;
+  font-family: "Verdana";
+  color: #000000;
 }
 
 .email,

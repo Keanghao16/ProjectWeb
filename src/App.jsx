@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Home from "./pages/HomePage";
-import About from "./pages/AboutPage";
-import Discover from "./pages/DiscoverPage";
+import AboutPage from "./pages/AboutPage";
+import DiscoverPage from "./pages/DiscoverPage";
 import PlaceDetail from "./pages/PlaceDetailPage";
 import CreateTrip from "./pages/CreateTrip";
 
@@ -11,16 +11,16 @@ function App() {
     {
       path: "/",
       element: <Home />,
-      // element: <PlaceDetailPage />,
     },
     {
       path: "/discover",
-      element: <Discover />,
+      element: <DiscoverPage />,
     },
     {
       path: "/about",
-      element: <About />,
+      element: <AboutPage />,
     },
+
     {
       path: "/details",
       element: <PlaceDetail />,

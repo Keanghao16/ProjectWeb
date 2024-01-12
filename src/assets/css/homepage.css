@@ -1,0 +1,6 @@
+.imagestack1 {
+  transition: 0.5s;
+}
+.imagestack1:hover {
+  transform: translateY(-10px);
+}

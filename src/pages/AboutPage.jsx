@@ -188,8 +188,9 @@ const AboutPage = () => {
           </div>
         </section>
       </div>
-
-      <Footer />
+      <div className={`${isPopupActive ? "blur-background" : ""}`}>
+        <Footer />
+      </div>
     </>
   );
 };

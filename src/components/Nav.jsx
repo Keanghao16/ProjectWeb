@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
+import GoogleButton from "react-google-button";
+import { signInWithPopup, signOut } from "firebase/auth";
 
+import { auth, googleAuthProvider } from "./Firebase";
 import { Link } from "react-router-dom";
+import { Logo, LogoBlack } from "../assets/img";
 import { useNavigate } from "react-router-dom";
 import "../assets/css/style.css";
 
@@ -10,8 +14,14 @@ const Nav = ({
   isPopupActive,
   setPopupActive,
 }) => {
+  const [isLoggedIn, setIsLoggedIn] = React.useState(
+    localStorage.getItem("isLoggedIn") === "true"
+  );
   const [isNavOpen, setIsNavOpen] = useState(false);
   const thisPage = currentPage;
+  const [activeH, setActiveH] = "";
+  const [activeD, setActiveD] = "";
+  const [activeA, setActiveA] = "";
   const handleToggle = () => {
     setIsNavOpen(!isNavOpen);
   };
@@ -30,6 +40,9 @@ const Nav = ({
         selectHeader.classList.add("header-scrolled");
       }
     };
+    //still need fixing
+    if (currentPage === "HomePage") {
+    }
 
     // Call headerScrolled manually when the currentPage changes
     headerScrolled();
@@ -85,6 +98,40 @@ const Nav = ({
     }
   });
 
+  //SignIN
+
+  const handleSignInWithGoogle = async () => {
+    try {
+      const result = await signInWithPopup(auth, googleAuthProvider);
+      console.log(result);
+      localStorage.setItem("token", result.user.accessToken);
+      localStorage.setItem("user", JSON.stringify(result.user));
+      localStorage.setItem("isLoggedIn", "true");
+
+      toggle("close");
+      setIsLoggedIn(true);
+
+      console.log("SignIN Sucessfully");
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const user = JSON.parse(localStorage.getItem("user"));
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+      localStorage.setItem("isLoggedIn", "false");
+
+      setIsLoggedIn(false);
+
+      console.log("SignOut Sucessfully");
+    } catch (error) {
+      console.error(error);
+    }
+  };
   return (
     <>
       <div id="blur">
@@ -106,7 +153,7 @@ const Nav = ({
               <div className="container">
                 <div className="navbar-brand">
                   <b onClick={NavigateToHome}>
-                    <img src={"public/image/triplogo.png"} alt="Logo" />
+                    <img src={Logo} alt="Logo" />
                   </b>
                 </div>
                 <button
@@ -157,42 +204,54 @@ const Nav = ({
                       </Link>
                     </li>
                     <li>
-                      <a
-                        className="loginsignups nav-link scrollto signinBTN"
-                        href="#"
-                        onClick={() => toggle()}
+                      <div
+                        id="dropdown"
+                        className={`dropdown text-end mx-5 ${
+                          isLoggedIn ? "visible" : "hidden"
+                        }`}
                       >
-                        Sign In
-                      </a>
+                        {user && (
+                          <img
+                            src={user.photoURL}
+                            alt="profile"
+                            className="imgProfile dropdown-toggle rounded-circle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                          />
+                        )}
+
+                        <ul className="dropdown-menu">
+                          <label className="dropdown-item disabled">
+                            {user && user.displayName}
+                          </label>
+                          <label className="dropdown-item disabled">
+                            {user && user.email}
+                          </label>
+                          <label className="dropdown-item">My Favorite</label>
+                          <label
+                            className="dropdown-item"
+                            onClick={handleLogout}
+                          >
+                            Sign Out
+                          </label>
+                        </ul>
+                      </div>
                     </li>
+                    {!isLoggedIn && (
+                      <li>
+                        <button
+                          className="loginsignups nav-link scrollto visible"
+                          onClick={() => toggle()}
+                        >
+                          Sign In
+                        </button>
+                      </li>
+                    )}
                   </ul>
                 </div>
               </div>
             </nav>
-
-            <div
-              id="dropdown"
-              className="dropdown text-end mx-5"
-              style={{ display: "none" }}
-            >
-              <img
-                src=""
-                alt="profile"
-                className="imgProfile dropdown-toggle rounded-circle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              />
-
-              <ul className="dropdown-menu">
-                <label className="dropdown-item name disabled"></label>
-                <label className="dropdown-item email disabled"></label>
-                <li className="dropdown-item">My Favorite</li>
-                <li className="dropdown-item" onClick={() => signOut()}>
-                  Sign Out
-                </li>
-              </ul>
-            </div>
           </div>
         </header>
       </div>
@@ -210,7 +269,7 @@ const Nav = ({
               ></button>
             </div>
             <div className="text-start">
-              <img src={"public/image/triplogoblk.png"} alt="logo" />
+              <img src={LogoBlack} alt="logo" />
             </div>
             <div className="text-center mt-3">
               <label className="fs-5 ">
@@ -222,7 +281,10 @@ const Nav = ({
               </label>
             </div>
 
-            <div id="google-button" className="mt-5"></div>
+            <GoogleButton
+              className="mt-5 mx-5 rounded-2"
+              onClick={handleSignInWithGoogle}
+            />
           </div>
         </div>
       </div>

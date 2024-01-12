@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import InnerNav from "../components/InnerNav";
 import InnerFooter from "../components/InnerFooter";
@@ -10,17 +10,89 @@ import "aos/dist/aos.css";
 import { MenuOpen } from "@mui/icons-material";
 
 const CreateTrip = () => {
+  const [isPopupActive, setIsPopupActive] = useState(false);
+  const blurRef = useRef(null);
+  const popupRef = useRef(null);
+  const bodyRef = useRef(document.body);
   const [place, setPlace] = useState();
   const [duration, setDuration] = useState();
   const [people, setPeople] = useState();
   const [money, setMoney] = useState();
   useEffect(() => {
+    bodyRef.current = document.body;
     AOS.init();
   }, []);
+
+  const handlePopup = (action) => {
+    const blur = blurRef.current;
+    const popup = popupRef.current;
+    const body = bodyRef.current;
+
+    if (action === "close") {
+      setIsPopupActive(false);
+      blur.classList.remove("active");
+      popup.classList.remove("active");
+      body.classList.remove("popup-active");
+      body.style.overflow = ""; // Restore default overflow
+    } else {
+      setIsPopupActive(true);
+      blur.classList.add("active");
+      popup.classList.add("active");
+      body.classList.add("popup-active");
+      body.style.overflow = "hidden"; // Prevent scrolling
+    }
+  };
+
+  // close the popup when clicking outside and ESC key
+  document.addEventListener("click", function (event) {
+    var popup = document.getElementById("popup");
+    var blur = document.getElementById("blur");
+
+    if (!popup.contains(event.target) && !blur.contains(event.target)) {
+      toggle("close");
+    }
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      toggle("close");
+    }
+  });
   return (
     <div className="App">
+      <div ref={popupRef} className="main" id="popup">
+        <div className="form login" id="loginForm" style={{ display: "block" }}>
+          <div className="form-content">
+            <div className="text-end">
+              <button
+                type="button"
+                className="btn-close"
+                id="closeBtn"
+                aria-label="Close"
+                onClick={() => handlePopup("close")}
+              ></button>
+            </div>
+            <div className="text-start">
+              <img src={"public/image/triplogoblk.png"} alt="logo" />
+            </div>
+            <div className="text-center mt-3">
+              <label className="fs-5 ">
+                <b>
+                  Sign In your account with
+                  <br />
+                  Trip Planner
+                </b>
+              </label>
+            </div>
+
+            <a className="mt-5 mx-5 rounded-2"> Yes </a>
+          </div>
+        </div>
+      </div>
       <InnerNav currentPage="CreatTrip" headerElementId="header" />
-      <section className="inner-page">
+      <section
+        className={` inner-page ${isPopupActive ? "blur-background" : ""}`}
+      >
         <div className="container d-flex justify-content-center">
           <div className="col" data-aos="fade-up" data-aos-duration="400">
             <h3>
@@ -121,7 +193,11 @@ const CreateTrip = () => {
               <p>{money}</p>
             </div>
             <div className="bruh" align="center">
-              <button type="button" class="btn btn-danger btn-sm">
+              <button
+                type="button"
+                class="btn btn-danger btn-sm"
+                onClick={() => handlePopup("open")}
+              >
                 Create
               </button>
             </div>

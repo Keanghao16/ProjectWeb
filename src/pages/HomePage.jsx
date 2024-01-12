@@ -3,20 +3,27 @@ import { useNavigate } from "react-router-dom";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
-
+import "../assets/css/homepage.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import DiscoverPage from "./DiscoverPage";
-import PlaceDetail from "./PlaceDetailPage";
-import PlaceDetailPage from "./PlaceDetailPage";
-
+import { Background, Cambodia, Srp, Tonle, Kohkong } from "../assets/img";
+import { db } from "../components/Firebase";
+import { collection, getDocs, getDocsFromCache } from "firebase/firestore";
 // import "../assets/css/style.css";
 
 const HomePage = () => {
+  const [places, setPlaces] = useState([]);
+  const placesCollectionRef = collection(db, "provinces/siemreap/places");
   const [isPopupActive, setIsPopupActive] = useState(false);
 
   useEffect(() => {
     AOS.init();
+    const getPlaces = async () => {
+      const data = await getDocs(placesCollectionRef);
+      setPlaces(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+      console.log(places);
+    };
+    getPlaces();
   }, []);
   const navigate = useNavigate();
 
@@ -38,7 +45,7 @@ const HomePage = () => {
       >
         <img
           className="mainbg"
-          src={"public/image/mainbg1.png"}
+          src={Background}
           alt="Background"
           data-aos="fade-in"
         />
@@ -69,7 +76,7 @@ const HomePage = () => {
       </section>
       {/* popup */}
 
-      <main id="main">
+      <main id="main" className={`${isPopupActive ? "blur-background" : ""}`}>
         <section id="info1" className="info1">
           <div
             className="container d-flex justify-content-center"
@@ -82,7 +89,7 @@ const HomePage = () => {
                 data-aos-delay="200"
               >
                 <img
-                  src="public/image/travel1.png"
+                  src={Cambodia}
                   className="img-fluid img animated rounded-circle mb-2"
                   alt=""
                 />
@@ -92,26 +99,29 @@ const HomePage = () => {
                 data-aos="fade-left"
                 data-aos-delay="100"
               >
-                <h3>
-                  Voluptatem dignissimos provident quasi corporis voluptates
-                </h3>
+                <h3>Create a best trip in Cambodia</h3>
                 <p className="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Nestled in the heart of Southeast Asia, Cambodia beckons with
+                  its rich cultural tapestry, ancient wonders, and warm
+                  hospitality. This enchanting kingdom, known as the "Land of
+                  Smiles," boasts a history that unfolds through magnificent
+                  temples, lush landscapes, and resilient communities.
                 </p>
               </div>
             </div>
           </div>
         </section>
-        <section id="features" className="features">
-          <div className="container section-title" data-aos="fade-up">
-            <h2>Features</h2>
-            <p>
-              Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-              consectetur velit
-            </p>
-          </div>
 
+        {/* <!-- ======= features ======= --> */}
+        <section id="pricing" className="pricing">
+          <div className="container" data-aos="fade-up">
+            <div className="section-title">
+              <h2>Trending Destination</h2>
+            </div>
+          </div>
+        </section>
+
+        <section id="features" className="features">
           <div className="container">
             <div className="row gy-4 align-items-center features-item">
               <div
@@ -119,33 +129,62 @@ const HomePage = () => {
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                <h3>Corporis temporibus maiores provident</h3>
+                <h3>Siem Reap</h3>
                 <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                  aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                  occaecat cupidatat non proident.
+                  <i>Five Fact about Siem Reap Province</i>
                 </p>
+                <ul>
+                  <li>
+                    <i className="bi bi-check"></i> Siem Reap is a city located
+                    in northwestern Cambodia.
+                  </li>
+                  <li>
+                    <i className="bi bi-check"></i>
+                    <div>
+                      {places.map((place) => {
+                        return (
+                          <div>
+                            <li>{place.placeName}</li>
+                            <li>{place.placeDetail}</li>
+                          </div>
+                        );
+                      })}
+                    </div>
+                    It is famous for being the gateway to the ancient temples of
+                    Angkor, including the iconic Angkor Wat.
+                  </li>
+                  <li>
+                    <i className="bi bi-check"></i>
+                    Siem Reap has a vibrant and bustling night market where
+                    visitors can shop for souvenirs, handicrafts, and sample
+                    local cuisine.
+                  </li>
+                  <li>
+                    <i className="bi bi-check"></i>
+                    The city is home to the Angkor National Museum, which
+                    displays artifacts and exhibits about the history and
+                    culture of the Angkor civilization.
+                  </li>
+                  <li>
+                    <i className="bi bi-check"></i>
+                    Siem Reap has a tropical climate with a distinct wet and dry
+                    season, making it best to visit during the cooler months
+                    from November to February.
+                  </li>
+                </ul>
               </div>
               <div
                 className="col-lg-7 order-1 order-lg-2 d-flex align-items-center"
                 data-aos="zoom-out"
                 data-aos-delay="100"
               >
-                <div className="image-stack">
-                  <img
-                    src="public/imagetravelcar2.jpg"
-                    alt=""
-                    className="stack-front"
-                  />
-                  <img
-                    src="public/imagetravelcar.jpg"
-                    alt=""
-                    className="stack-back"
-                  />
+                <div className="image-stack imagestack1">
+                  <img src={Srp} alt="" className="stack-front" />
+                  <img src={Tonle} alt="" className="stack-back" />
                 </div>
               </div>
             </div>
+            {/* <!-- Features Item --> */}
 
             <div className="row gy-4 align-items-stretch justify-content-between features-item ">
               <div
@@ -153,8 +192,8 @@ const HomePage = () => {
                 data-aos="zoom-out"
               >
                 <img
-                  src="public/travelcar.jpg"
-                  className="img-fluid rounded"
+                  src={Kohkong}
+                  className="img-fluid rounded imagestack1"
                   alt=""
                 />
               </div>
@@ -162,39 +201,43 @@ const HomePage = () => {
                 className="col-lg-5 d-flex justify-content-center flex-column"
                 data-aos="fade-up"
               >
-                <h3>Sunt consequatur ad ut est nulla</h3>
+                <h3>Koh Kong Island</h3>
                 <p>
-                  Cupiditate placeat cupiditate placeat est ipsam culpa.
-                  Delectus quia minima quod. Sunt saepe odit aut quia voluptatem
-                  hic voluptas dolor doloremque.
+                  <i>Five Fact about Koh Kong</i>
                 </p>
                 <ul>
                   <li>
-                    <i className="bi bi-check"></i>{" "}
-                    <span>
-                      Ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </span>
+                    <i className="bi bi-check"></i>
+                    Koh Kong is a province located in southwestern Cambodia.
                   </li>
                   <li>
                     <i className="bi bi-check"></i>
-                    <span>
-                      {" "}
-                      Duis aute irure dolor in reprehenderit in voluptate velit.
-                    </span>
+                    It is known for its stunning natural beauty, including
+                    pristine beaches and lush rainforests.
                   </li>
                   <li>
-                    <i className="bi bi-check"></i>{" "}
-                    <span>
-                      Facilis ut et voluptatem aperiam. Autem soluta ad fugiat
-                    </span>
-                    .
+                    <i className="bi bi-check"></i>
+                    The province is home to the largest national park in
+                    Cambodia, the Cardamom Mountains Protected Forest.
+                  </li>
+                  <li>
+                    <i className="bi bi-check"></i>
+                    Koh Kong is a popular eco-tourism destination, offering
+                    activities such as jungle trekking, wildlife spotting, and
+                    kayaking.
+                  </li>
+                  <li>
+                    <i className="bi bi-check"></i>
+                    The province shares a border with Thailand and is a gateway
+                    for travelers crossing between the two countries.
                   </li>
                 </ul>
               </div>
             </div>
+            {/* <!-- Features Item --> */}
           </div>
         </section>
-
+        {/* <!--info2--> */}
         <section id="info2" className="info2">
           <div
             className="container d-flex justify-content-center"
@@ -207,7 +250,7 @@ const HomePage = () => {
                 data-aos-delay="200"
               >
                 <img
-                  src="public/imagetravel3.png"
+                  src="public/image/cam.jpg"
                   className="img-fluid animated rounded-circle mb-2"
                   alt=""
                 />
@@ -217,9 +260,7 @@ const HomePage = () => {
                 data-aos="fade-left"
                 data-aos-delay="100"
               >
-                <h3>
-                  Voluptatem dignissimos provident quasi corporis voluptates
-                </h3>
+                <h3>Let's Enjoy Your Trip with Us</h3>
                 <p className="fst-italic">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -229,139 +270,12 @@ const HomePage = () => {
           </div>
         </section>
 
-        <section id="pricing" className="pricing">
-          <div className="container" data-aos="fade-up">
-            <div className="section-title">
-              <h2>MAIN FEATURES</h2>
-              <p>
-                Our website offers a really insane main feature that has been
-                described over 20 times already since the moment you visited
-                this site. However we will make you go through it again ( just
-                to make sure )
-              </p>
-            </div>
-
-            <div className="row">
-              <div className="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <div className="box">
-                  <h3>Free Plan</h3>
-                  <h4>
-                    <sup>$</sup>0<span>per month</span>
-                  </h4>
-                  <ul>
-                    <li>
-                      <i className="bx bx-check"></i> Quam adipiscing vitae
-                      proin
-                    </li>
-                    <li>
-                      <i className="bx bx-check"></i> Nec feugiat nisl pretium
-                    </li>
-                    <li>
-                      <i className="bx bx-check"></i> Nulla at volutpat diam
-                      uteera
-                    </li>
-                    <li className="na">
-                      <i className="bx bx-x"></i>{" "}
-                      <span>Pharetra massa massa ultricies</span>
-                    </li>
-                    <li className="na">
-                      <i className="bx bx-x"></i>{" "}
-                      <span>Massa ultricies mi quis hendrerit</span>
-                    </li>
-                  </ul>
-                  <div>
-                    <button onClick={NavigateToDetails}>Get Started</button>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="col-lg-4 mt-4 mt-lg-0"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                <div className="box featured">
-                  <h3>Business Plan</h3>
-                  <h4>
-                    <sup>$</sup>29<span>per month</span>
-                  </h4>
-                  <ul>
-                    <li>
-                      <i className="bx bx-check"></i> Quam adipiscing vitae
-                      proin
-                    </li>
-                    <li>
-                      <i className="bx bx-check"></i> Nec feugiat nisl pretium
-                    </li>
-                    <li>
-                      <i className="bx bx-check"></i> Nulla at volutpat diam
-                      uteera
-                    </li>
-                    <li>
-                      <i className="bx bx-check"></i> Pharetra massa massa
-                      ultricies
-                    </li>
-                    <li>
-                      <i className="bx bx-check"></i> Massa ultricies mi quis
-                      hendrerit
-                    </li>
-                  </ul>
-                  <a href="#" className="buy-btn">
-                    Get Started
-                  </a>
-                </div>
-              </div>
-
-              <div
-                className="col-lg-4 mt-4 mt-lg-0"
-                data-aos="fade-up"
-                data-aos-delay="300"
-              >
-                <div className="box">
-                  <h3>Developer Plan</h3>
-                  <h4>
-                    <sup>$</sup>49<span>per month</span>
-                  </h4>
-                  <ul>
-                    <li>
-                      <i className="bx bx-check"></i> Quam adipiscing vitae
-                      proin
-                    </li>
-                    <li>
-                      <i className="bx bx-check"></i> Nec feugiat nisl pretium
-                    </li>
-                    <li>
-                      <i className="bx bx-check"></i> Nulla at volutpat diam
-                      uteera
-                    </li>
-                    <li>
-                      <i className="bx bx-check"></i> Pharetra massa massa
-                      ultricies
-                    </li>
-                    <li>
-                      <i className="bx bx-check"></i> Massa ultricies mi quis
-                      hendrerit
-                    </li>
-                  </ul>
-                  <a href="#" className="buy-btn">
-                    Get Started
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        {/* <!-- ======= Frequently Asked Questions Section ======= --> */}
         <section id="faq" className="faq section-bg">
           <div className="container" data-aos="fade-up">
             <div className="section-title">
-              <h2>Frequently Asked Questions</h2>
-              <p>
-                Magnam dolores commodi suscipit. Necessitatibus eius consequatur
-                ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-                quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-                Quia fugiat sit in iste officiis commodi quidem hic quas.
-              </p>
+              <h2>FAQ</h2>
+              <p>Here is some frequency asked questions in our Website</p>
             </div>
 
             <div className="faq-list">
@@ -373,22 +287,22 @@ const HomePage = () => {
                     className="collapse"
                     data-bs-target="#faq-list-1"
                   >
-                    Non consectetur a erat nam at lectus urna duis?{" "}
+                    When the best time to visit Siem Reap?{" "}
                     <i className="bx bx-chevron-down icon-show"></i>
                     <i className="bx bx-chevron-up icon-close"></i>
                   </a>
-                  <div
+                  <ul
                     id="faq-list-1"
                     className="collapse show"
                     data-bs-parent=".faq-list"
                   >
-                    <p>
-                      Feugiat pretium nibh ipsum consequat. Tempus iaculis urna
-                      id volutpat lacus laoreet non curabitur gravida. Venenatis
-                      lectus magna fringilla urna porttitor rhoncus dolor purus
-                      non.
-                    </p>
-                  </div>
+                    <li>
+                      The best time to visit Siem Reap is during the dry season
+                      from November to March when the weather is pleasant, and
+                      you can enjoy clear skies and explore the attractions
+                      comfortably.
+                    </li>
+                  </ul>
                 </li>
 
                 <li data-aos="fade-up" data-aos-delay="200">
@@ -398,24 +312,23 @@ const HomePage = () => {
                     data-bs-target="#faq-list-2"
                     className="collapsed"
                   >
-                    Feugiat scelerisque varius morbi enim nunc?{" "}
+                    What are the recommended resturants to eat in Koh Kong?
                     <i className="bx bx-chevron-down icon-show"></i>
                     <i className="bx bx-chevron-up icon-close"></i>
                   </a>
-                  <div
+                  <ul
                     id="faq-list-2"
                     className="collapse"
                     data-bs-parent=".faq-list"
                   >
-                    <p>
-                      Dolor sit amet consectetur adipiscing elit pellentesque
-                      habitant morbi. Id interdum velit laoreet id donec
-                      ultrices. Fringilla phasellus faucibus scelerisque
-                      eleifend donec pretium. Est pellentesque elit ullamcorper
-                      dignissim. Mauris ultrices eros in cursus turpis massa
-                      tincidunt dui.
-                    </p>
-                  </div>
+                    <li>
+                      Indulge in delicious seafood at The River Restaurant,
+                      savor mouthwatering barbecued delights at Rusty Keyhole,
+                      or enjoy stunning views while dining at Koh Kong Bay
+                      Restaurant. These establishments offer a variety of
+                      culinary experiences to satisfy your taste buds.
+                    </li>
+                  </ul>
                 </li>
 
                 <li data-aos="fade-up" data-aos-delay="300">
@@ -425,24 +338,29 @@ const HomePage = () => {
                     data-bs-target="#faq-list-3"
                     className="collapsed"
                   >
-                    Dolor sit amet consectetur adipiscing elit?{" "}
+                    What are the best things to do in Mondulkiri?
                     <i className="bx bx-chevron-down icon-show"></i>
                     <i className="bx bx-chevron-up icon-close"></i>
                   </a>
-                  <div
+                  <ul
                     id="faq-list-3"
                     className="collapse"
                     data-bs-parent=".faq-list"
                   >
-                    <p>
-                      Eleifend mi in nulla posuere sollicitudin aliquam ultrices
-                      sagittis orci. Faucibus pulvinar elementum integer enim.
-                      Sem nulla pharetra diam sit amet nisl suscipit. Rutrum
-                      tellus pellentesque eu tincidunt. Lectus urna duis
-                      convallis convallis tellus. Urna molestie at elementum eu
-                      facilisis sed odio morbi quis
-                    </p>
-                  </div>
+                    <li>
+                      Mondulkiri offers a plethora of exciting activities, such
+                      as visiting the breathtaking Bousra Waterfall, exploring
+                      the Elephant Valley Project, discovering the Sea Forest,
+                      trekking through the Phnom Dos Kromom Mountain, enjoying a
+                      Coffee Plantation Tour, experiencing the Bou Sra Village,
+                      visiting the Dohkrormom Mountain, exploring the Oraing
+                      District, discovering the Yok Sros Phlom Temple, visiting
+                      the Jahoo Gibbon Camp, exploring the Romnea Wildlife
+                      Sanctuary, experiencing the Pong Village, discovering the
+                      Chrey Thom Waterfall, and enjoying the vibrant Sen Monorom
+                      Market.
+                    </li>
+                  </ul>
                 </li>
 
                 <li data-aos="fade-up" data-aos-delay="400">
@@ -452,23 +370,27 @@ const HomePage = () => {
                     data-bs-target="#faq-list-4"
                     className="collapsed"
                   >
-                    Tempus quam pellentesque nec nam aliquam sem et tortor
-                    consequat? <i className="bx bx-chevron-down icon-show"></i>
+                    Where can i find authentic Khmer cuisine in Phnom Penh?
+                    <i className="bx bx-chevron-down icon-show"></i>
                     <i className="bx bx-chevron-up icon-close"></i>
                   </a>
-                  <div
+                  <ul
                     id="faq-list-4"
                     className="collapse"
                     data-bs-parent=".faq-list"
                   >
-                    <p>
-                      Molestie a iaculis at erat pellentesque adipiscing
-                      commodo. Dignissim suspendisse in est ante in. Nunc vel
-                      risus commodo viverra maecenas accumsan. Sit amet nisl
-                      suscipit adipiscing bibendum est. Purus gravida quis
-                      blandit turpis cursus in.
-                    </p>
-                  </div>
+                    <li>
+                      To savor authentic Khmer cuisine, Friends the Restaurant
+                      is a great choice, offering delicious dishes while
+                      supporting a social enterprise. Romdeng is another
+                      fantastic option, located in a beautifully restored
+                      colonial building, serving traditional Cambodian
+                      delicacies. For a refined dining experience, Malis
+                      showcases the diversity and complexity of Khmer flavors.
+                      These restaurants offer a delightful culinary journey
+                      through the tastes of Cambodia.
+                    </li>
+                  </ul>
                 </li>
 
                 <li data-aos="fade-up" data-aos-delay="500">
@@ -478,29 +400,29 @@ const HomePage = () => {
                     data-bs-target="#faq-list-5"
                     className="collapsed"
                   >
-                    Tortor vitae purus faucibus ornare. Varius vel pharetra vel
-                    turpis nunc eget lorem dolor?{" "}
+                    What are the some travel tips for visitting Kampot?
                     <i className="bx bx-chevron-down icon-show"></i>
                     <i className="bx bx-chevron-up icon-close"></i>
                   </a>
-                  <div
+                  <ul
                     id="faq-list-5"
                     className="collapse"
                     data-bs-parent=".faq-list"
                   >
-                    <p>
-                      Laoreet sit amet cursus sit amet dictum sit amet justo.
-                      Mauris vitae ultricies leo integer malesuada nunc vel.
-                      Tincidunt eget nullam non nisi est sit amet. Turpis nunc
-                      eget lorem dolor sed. Ut venenatis tellus in metus
-                      vulputate eu scelerisque.
-                    </p>
-                  </div>
+                    <li>
+                      Plan your visit to Bokor National Park during the dry
+                      season, wear sturdy footwear when exploring caves, check
+                      water levels at the Teuk Chhou Rapids, and consider
+                      renting a motorbike or bicycle for exploring the
+                      countryside.
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </div>
           </div>
         </section>
+        {/* <!-- End Frequently Asked Questions Section d--> */}
       </main>
 
       <Footer />
