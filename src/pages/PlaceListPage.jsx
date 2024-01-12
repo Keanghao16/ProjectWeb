@@ -11,7 +11,7 @@ import { KohKong, PhnomPenh } from "../data/PlaceList.json";
 
 
 
-const PlaceListPage = () => {
+const PlaceListPage = ({province}) => {
   const [isPopupActive, setIsPopupActive] = useState(false);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const PlaceListPage = () => {
         setPopupActive={setIsPopupActive}
       />
 
-      <PlaceList Province={KohKong} isPopupActive={isPopupActive} />
+      <PlaceList Province={province} isPopupActive={isPopupActive} />
     </>
   );
 };

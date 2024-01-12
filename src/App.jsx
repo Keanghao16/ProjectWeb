@@ -7,6 +7,10 @@ import AboutPage from "./pages/AboutPage";
 import PlaceDetailPage from "./pages/PlaceDetailPage";
 import PlaceListPage from "./pages/PlaceListPage";
 
+
+import Placedetail from "./pages/DetailPage/Placedetail"
+import { KohKong, PhnomPenh } from "./data/PlaceList.json";
+
 function App() {
   const router = createBrowserRouter([
     {
@@ -22,13 +26,26 @@ function App() {
       element: <AboutPage />,
     },
     {
-      path: "/placelist",
-      element: <PlaceListPage />,
+      path: "/discover/phnompenh",
+      element: <PlaceListPage province={PhnomPenh}/>,
     },
     {
-      path: "/placedetail",
-      element: <PlaceDetailPage />,
+      path: "/discover/kohkong",
+      element: <PlaceListPage province={KohKong}/>,
     },
+    // {
+    //   path: "/placedetail",
+    //   element: <PlaceDetailPage />,
+    // },
+    {
+      path: "/kohkong",
+      element: <PlaceListPage province={KohKong}/>
+    },
+    {
+      path: "/Placedetail",
+      element: <Placedetail />
+  }
+    
   ]);
   // onclick ={() => history.back()}
   return <RouterProvider router={router} />;

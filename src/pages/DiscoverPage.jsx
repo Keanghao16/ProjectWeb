@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import Discover from "../data/DIscover.json";
@@ -45,7 +45,7 @@ const DiscoverPage = () => {
                   className="col-sm-6 col-md-4 col-lg-3 Discover-card"
                   key={Discover.id}
                 >
-                  <a href="#" className="card-link" >
+                <Link to={`/discover/${Discover.link}`} className="card-link" >
                     <div className="card" data-aos="zoom-out">
                       <img
                         src={Discover.img}
@@ -61,7 +61,7 @@ const DiscoverPage = () => {
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               ))}
           </div>
