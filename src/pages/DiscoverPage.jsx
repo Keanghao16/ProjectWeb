@@ -110,7 +110,7 @@ const DiscoverPage = () => {
               </Link>
             </div>
             <div className="col-sm-6 col-md-4 col-lg-3 Discover-card">
-              <a href="#" className="card-link">
+              <Link to="/discover/battambang" className="card-link">
                 <div className="card" data-aos="zoom-out" data-aos-once="true">
                   <img
                     src={Battambang}
@@ -127,10 +127,10 @@ const DiscoverPage = () => {
                     </p>
                   </div>
                 </div>
-              </a>
+              </Link>
             </div>
             <div className="col-sm-6 col-md-4 col-lg-3 Discover-card">
-              <a href="#" className="card-link">
+              <Link to="/discover/kampot" className="card-link">
                 <div className="card" data-aos="zoom-out" data-aos-once="true">
                   <img
                     src={Kampot}
@@ -147,10 +147,10 @@ const DiscoverPage = () => {
                     </p>
                   </div>
                 </div>
-              </a>
+              </Link>
             </div>
             <div className="col-sm-6 col-md-4 col-lg-3 Discover-card">
-              <a href="#" className="card-link">
+              <Link to="/discover/mondulkiri" className="card-link">
                 <div className="card" data-aos="zoom-out" data-aos-once="true">
                   <img
                     src={Mondulkiri}
@@ -167,10 +167,10 @@ const DiscoverPage = () => {
                     </p>
                   </div>
                 </div>
-              </a>
+              </Link>
             </div>
             <div className="col-sm-6 col-md-4 col-lg-3 Discover-card">
-              <a href="#" className="card-link">
+              <Link to="/discover/kohkong" className="card-link">
                 <div className="card" data-aos="zoom-out" data-aos-once="true">
                   <img
                     src={Koh_Kong}
@@ -179,7 +179,7 @@ const DiscoverPage = () => {
                   />
                   <div className="card-body">
                     <h5 className="card-title Discover">
-                      <b>Khemarak Phoumin</b>
+                      <b>Koh Kong</b>
                     </h5>
                     <p className="card-text description">
                       Khemarak Phoumin, also Koh Kong, is the capital and
@@ -187,10 +187,10 @@ const DiscoverPage = () => {
                     </p>
                   </div>
                 </div>
-              </a>
+              </Link>
             </div>
             <div className="col-sm-6 col-md-4 col-lg-3 Discover-card">
-              <a href="#" className="card-link">
+              <Link to="/discover/stungtreng" className="card-link">
                 <div className="card" data-aos="zoom-out" data-aos-once="true">
                   <img
                     src={StungTreng}
@@ -207,7 +207,7 @@ const DiscoverPage = () => {
                     </p>
                   </div>
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -30,20 +30,22 @@ const Battambang = () => {
               <div className="row g-0">
                 <div className="col-md-5">
                   <img
-                    src="../src/assets/img/SiemReap/Angkor_Wat.jpg"
+                    src="../src/assets/img/Battambang/Ancient_House.jpg"
                     className="card-img-top"
                   />
                 </div>
                 <div className="col-md-7">
                   <div className="card-body">
-                    <h4 className="card-title">Mrs. Bun Roeung's Ancient House</h4>
+                    <h4 className="card-title">
+                      Mrs. Bun Roeung's Ancient House
+                    </h4>
                     <p className="card-text">
-                      Angkor Wat (Khmer: អង្គរវត្ត, "City/Capital of Temples")
-                      is a temple complex in Cambodia, located on a site
-                      measuring 162.6 hectares (1,626,000 m2; 402 acres). It
-                      resides within the ancient Khmer capital city of Angkor.
-                      The Guinness World Records considers it as the largest
-                      religious structure in the world.
+                      This ancient house was occupied and maintained for three
+                      generations already. This house measures 29 meters in
+                      length and 10.5 meters in width, and was constructed on a
+                      surface area of 5, 450 square meters in Pet style(a kind
+                      of house), meaning that the house has verandahs (drying
+                      place) at the front and its two sides.
                     </p>
                     <div className="card-body d-flex align-items-center justify-content-center">
                       <a className="card-text" href="#">
@@ -61,20 +63,22 @@ const Battambang = () => {
               <div className="row g-0">
                 <div className="col-md-5">
                   <img
-                    src="../src/assets/img/SiemReap/Bayon.jpg"
+                    src="../src/assets/img/Battambang/Battambang_townhouses.jpg"
                     className="card-img-top"
                   />
                 </div>
                 <div className="col-md-7">
                   <div className="card-body">
-                    <h4 className="card-title">Bayon Temple</h4>
+                    <h4 className="card-title">Krong Battambang</h4>
                     <p className="card-text">
-                      The Bayon (Khmer: ប្រាសាទបាយ័ន) is a richly decorated
-                      Khmer temple related to Buddhism at Angkor in Cambodia.
-                      Built in the late 12th or early 13th century as the state
-                      temple of the King Jayavarman VII (Khmer:
-                      ព្រះបាទជ័យវរ្ម័នទី ៧), the Bayon stands at the centre of
-                      Jayavarman's capital, Angkor Thom (Khmer: អង្គរធំ).
+                      Battambang was established as an important trading city
+                      with around 2,500 residents in the 18th century. The
+                      population was centred along a single road parallel to the
+                      Sangkae River (Stung Sangkae). In 1795 Siam (modern-day
+                      Thailand) annexed much of north western Cambodia including
+                      the current provinces of Banteay Meanchey, Battambang,
+                      Oddar Meanchey, Pailin, and Siem Reap into the province of
+                      Inner Cambodia.
                     </p>
                     <div className="card-body d-flex align-items-center justify-content-center">
                       <a className="card-text" href="#">
@@ -92,20 +96,21 @@ const Battambang = () => {
               <div className="row g-0">
                 <div className="col-md-5">
                   <img
-                    src="../src/assets/img/SiemReap/Ta_Prohm.jpg"
+                    src="../src/assets/img/Battambang/Ek_Phnom.jpg"
                     className="card-img-top"
                   />
                 </div>
                 <div className="col-md-7">
                   <div className="card-body">
-                    <h4 className="card-title">Ta Prohm Temple</h4>
+                    <h4 className="card-title">Wat Ek Phnom</h4>
                     <p className="card-text">
-                      Ta Prohm (Khmer: ប្រាសាទតាព្រហ្ម) is the modern name of a
-                      temple near the city of Siem Reap, Cambodia, approximately
-                      one kilometre east of Angkor Thom and on the southern edge
-                      of the East Baray. It was built in the Bayon style largely
-                      in the late 12th century and early 13th century and was
-                      originally called Rajavihara (Khmer: រាជវិហារ).
+                      Wat Ek Phnom is an Angkorian temple located on the left
+                      side of the Sangkae River at the small creek of Prek Daun
+                      Taev northwest the Peam Aek spot approximately 9 km north
+                      of the city of Battambang in north western Cambodia. It is
+                      a Hindu temple built in the 11th century under the rule of
+                      King Suryavarman I. Although partly collapsed and looted
+                      it is famous for its well-carved lintels and pediments.
                     </p>
                     <div className="card-body d-flex align-items-center justify-content-center">
                       <a className="card-text" href="#">

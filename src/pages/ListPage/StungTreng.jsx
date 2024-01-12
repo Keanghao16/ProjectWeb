@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Nav from "../../components/Nav";
 const StungTreng = () => {
+  const [isPopupActive, setIsPopupActive] = useState(false);
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <>
       <Nav
