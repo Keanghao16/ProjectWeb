@@ -121,7 +121,6 @@ const CreateTrip = () => {
                   Kampot
                 </option>
               </select>
-              <p>{place}</p>
             </div>
             <div class="question">
               <p>How long do you want to stay?</p>
@@ -144,7 +143,6 @@ const CreateTrip = () => {
                   1 Week
                 </option>
               </select>
-              <p>{duration}</p>
             </div>
             <div class="question">
               <p>How many people are you going with?</p>
@@ -167,7 +165,6 @@ const CreateTrip = () => {
                   4+
                 </option>
               </select>
-              <p>{people}</p>
             </div>
             <div class="question">
               <p>How much would you like to spend?</p>
@@ -190,7 +187,6 @@ const CreateTrip = () => {
                   200+$
                 </option>
               </select>
-              <p>{money}</p>
             </div>
             <div className="bruh" align="center">
               <button
@@ -204,7 +200,7 @@ const CreateTrip = () => {
           </div>
         </div>
       </section>
-      <div className="kdmv">
+      <div className="kmv">
         <InnerFooter />
       </div>
     </div>

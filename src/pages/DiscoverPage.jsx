@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import Nav from "../components/Nav";
 import Discover from "../data/Discover.json";
-
+import { useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import {
@@ -22,6 +22,16 @@ const DiscoverPage = () => {
   useEffect(() => {
     AOS.init();
   }, []);
+  const navigate = useNavigate();
+  const NavigateToPhnomPenh = () => {
+    navigate("/discover/phnompenhlist");
+  };
+  const NavigateToSiemReap = () => {
+    navigate("/discover/siemreaplist");
+  };
+  const NavigateToPreahVihear = () => {
+    navigate("/discover/preahvihearlist");
+  };
 
   return (
     <>
@@ -50,7 +60,12 @@ const DiscoverPage = () => {
           <div className="row gy-3 my-3">
             <div className="col-sm-6 col-md-4 col-lg-3 province-card">
               <a href="#" className="card-link">
-                <div className="card" data-aos="zoom-out" data-aos-once="true">
+                <div
+                  className="card"
+                  data-aos="zoom-out"
+                  data-aos-once="true"
+                  onClick={NavigateToPhnomPenh}
+                >
                   <img
                     src={PhnomPenh}
                     className="card-img-top card-img-fixed"
@@ -70,7 +85,12 @@ const DiscoverPage = () => {
             </div>
             <div className="col-sm-6 col-md-4 col-lg-3 province-card">
               <a href="#" className="card-link">
-                <div className="card" data-aos="zoom-out" data-aos-once="true">
+                <div
+                  className="card"
+                  data-aos="zoom-out"
+                  data-aos-once="true"
+                  onClick={NavigateToSiemReap}
+                >
                   <img
                     src={SiemReap}
                     className="card-img-top card-img-fixed"
@@ -90,7 +110,12 @@ const DiscoverPage = () => {
             </div>
             <div className="col-sm-6 col-md-4 col-lg-3 province-card">
               <a href="#" className="card-link">
-                <div className="card" data-aos="zoom-out" data-aos-once="true">
+                <div
+                  className="card"
+                  data-aos="zoom-out"
+                  data-aos-once="true"
+                  onClick={NavigateToPreahVihear}
+                >
                   <img
                     src={PreahVihear}
                     className="card-img-top card-img-fixed"

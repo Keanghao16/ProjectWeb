@@ -1,7 +1,11 @@
 {
   "KohKong": {
     "name": "Koh Kong",
-    "imageShow": ["public/image/island1.jpg", "public/image/island2.jpg", "public/image/island3.jpg"],
+    "imageShow": [
+      "public/image/island1.jpg",
+      "public/image/island2.jpg",
+      "public/image/island3.jpg"
+    ],
     "description": [
       "As the gateway to the magnificent temples of Angkor, Siem Reap is sitting on Southeast Asia's biggest drawcard, yet the town and its people still retain their countryside outlook and wonderful sense of Cambodian hospitality."
     ],

@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import { Nun, Hao, Ratha } from "../assets/img";
 const AboutPage = () => {
   const [isPopupActive, setIsPopupActive] = useState(false);
 
@@ -30,15 +30,14 @@ const AboutPage = () => {
             <div className="row content">
               <div className="col-lg-6">
                 <p>
-                  &nbsp; &nbsp;Trip Planner, the world's largest travel guidance
-                  platform, helps hundreds of millions of people each month
-                  become better travelers, from planning to taking a trip.
-                  Travelers in Cambodia should use the Trip Planner site to
-                  discover where to stay, what to do and where to eat based on
-                  guidance from those who have been there before. Travelers turn
-                  to Trip Planner to find deals on accommodations, reserve
-                  tables at delicious restaurants and discover great places
-                  nearby.
+                  &nbsp; &nbsp;Trip Planner, the is a travel guidance platform,
+                  helps peopl people each month become better travelers, from
+                  planning to taking a trip. Travelers in Cambodia should use
+                  the Trip Planner site to discover where to stay, what to do
+                  and where to eat based on guidance from those who have been
+                  there before. Travelers turn to Trip Planner to find deals on
+                  accommodations, reserve tables at delicious restaurants and
+                  discover great places nearby.
                 </p>
               </div>
               <div className="col-lg-6 pt-4 pt-lg-0">
@@ -66,11 +65,7 @@ const AboutPage = () => {
               <div className="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
                 <div className="member d-flex align-items-start">
                   <div className="pic">
-                    <img
-                      src="public/image/nun.jpg"
-                      className="img-fluid"
-                      alt=""
-                    />
+                    <img src={Nun} className="img-fluid" alt="" />
                   </div>
                   <div className="member-info">
                     <h4>Thou Sokphanun</h4>
@@ -108,11 +103,7 @@ const AboutPage = () => {
               >
                 <div className="member d-flex align-items-start">
                   <div className="pic">
-                    <img
-                      src="public/image/hao.jpg"
-                      className="img-fluid"
-                      alt=""
-                    />
+                    <img src={Hao} className="img-fluid" alt="" />
                   </div>
                   <div className="member-info">
                     <h4>Tie Keanghao</h4>
@@ -150,11 +141,7 @@ const AboutPage = () => {
               >
                 <div className="member d-flex align-items-start">
                   <div className="pic">
-                    <img
-                      src="public/image/lily.jpg"
-                      className="img-fluid"
-                      alt=""
-                    />
+                    <img src={Ratha} className="img-fluid" alt="" />
                   </div>
                   <div className="member-info">
                     <h4>Thon Ratha</h4>

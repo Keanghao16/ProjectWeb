@@ -42,9 +42,16 @@ const InnerNav = ({
   }, [currentPage, headerElementId]);
 
   const navigate = useNavigate();
-
   const NavigateToHome = () => {
-    navigate("/");
+    if (currentPage === "PhnomPenhList") {
+      navigate("/discover");
+    } else if (currentPage === "CreatTrip") {
+      navigate("/");
+    } else if (currentPage === "SiemReapList") {
+      navigate("/discover");
+    } else if (currentPage === "PreahVihearList") {
+      navigate("/discover");
+    }
   };
 
   return (

@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 import "../assets/css/homepage.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Background, Cambodia, Srp, Tonle, Kohkong } from "../assets/img";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { Background, Cambodia, Srp, Tonle, Kohkong, Cam } from "../assets/img";
 import { db } from "../components/Firebase";
 import { collection, getDocs, getDocsFromCache } from "firebase/firestore";
 // import "../assets/css/style.css";
@@ -250,7 +251,7 @@ const HomePage = () => {
                 data-aos-delay="200"
               >
                 <img
-                  src="public/image/cam.jpg"
+                  src={Cam}
                   className="img-fluid animated rounded-circle mb-2"
                   alt=""
                 />
