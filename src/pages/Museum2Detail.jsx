@@ -72,10 +72,10 @@ const Museum2Detail = () => {
               <div className="place-details my-4">
                 <p className="details-title text-color mb-1">Place Details</p>
                 <p className="description">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Sapiente eos labore consequatur, dicta natus maiores, ullam
-                  dolor corporis eveniet beatae sunt delectus excepturi,
-                  cupiditate minus ad molestiae quod molestias nisi!
+                  The Tuol Sleng Genocide Museum in Phnom Penh, Cambodia, stands
+                  as a stark reminder of the horrors of the Khmer Rouge regime.
+                  It's a place of immense historical significance, but also one
+                  that can be emotionally challenging to visit.
                 </p>
               </div>
 
@@ -84,9 +84,35 @@ const Museum2Detail = () => {
                 Some tips before you go to this place
                 <div>
                   <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>
+                      Be prepared for an emotional experience: Visiting Tuol
+                      Sleng can be a deeply moving and disturbing
+                      experience. It's important to be prepared for the
+                      emotional impact of the exhibits and take breaks if
+                      needed.
+                    </li>
+                    <li>
+                      Dress respectfully: Out of respect for the victims and
+                      survivors, dress modestly and conservatively when visiting
+                      the museum.
+                    </li>
+                    <li>
+                      Hire an audio guide or guide: Consider hiring an audio
+                      guide or guide to provide context and deeper understanding
+                      of the exhibits. Their insights can help you navigate the
+                      museum's complex history.
+                    </li>
+                    <li>
+                      Take breaks: The museum can be overwhelming, so take
+                      breaks when needed. There are gardens and courtyards
+                      within the museum where you can find some peace and quiet.
+                    </li>
+                    <li>
+                      Reflect on the importance of remembrance: Tuol Sleng is a
+                      powerful reminder of the importance of remembering and
+                      learning from dark chapters in history. Take time to
+                      reflect on the museum's message of peace and tolerance.
+                    </li>
                   </ul>
                 </div>
               </div>

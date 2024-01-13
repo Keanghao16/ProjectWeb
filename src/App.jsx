@@ -57,7 +57,7 @@ function App() {
       element: <Museum2Detail />,
     },
     {
-      path: "discover/phnompenhlist/royaldetail",
+      path: "discover/phnompenhlist/royal",
       element: <RoyalDetail />,
     },
     {

@@ -72,10 +72,12 @@ const MuseumDetail = () => {
               <div className="place-details my-4">
                 <p className="details-title text-color mb-1">Place Details</p>
                 <p className="description">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Sapiente eos labore consequatur, dicta natus maiores, ullam
-                  dolor corporis eveniet beatae sunt delectus excepturi,
-                  cupiditate minus ad molestiae quod molestias nisi!
+                  The National Museum of Cambodia is home to the world’s finest
+                  collection of Khmer sculpture: a millennium’s worth and more
+                  of masterful Khmer design. It's housed in a graceful
+                  terracotta structure of traditional design (built from 1917 to
+                  1920) with an inviting courtyard garden, just north of the
+                  Royal Palace.
                 </p>
               </div>
 
@@ -84,9 +86,33 @@ const MuseumDetail = () => {
                 Some tips before you go to this place
                 <div>
                   <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>
+                      Opening hours: The museum is open daily from 8:00 AM to
+                      5:00 PM. The last admission is at 4:30 PM.
+                    </li>
+                    <li>
+                      Tickets: Tickets cost $10 for foreigners aged 18 and
+                      above, $5 for foreigners aged 10-17, and 500 riel for
+                      Cambodians. Children under 10 and school groups enter for
+                      free. You can purchase tickets at the entrance.
+                    </li>
+                    <li>
+                      Getting there: The National Museum is located on Street 13
+                      in central Phnom Penh, next to the Royal Palace. You can
+                      easily reach the museum by tuk-tuk, taxi, or on foot.
+                    </li>
+                    <li>
+                      Wear comfortable shoes: You'll be doing a lot of
+                      walking, so make sure you're wearing comfortable shoes.
+                    </li>
+                    <li>
+                      Bring water: It can get hot and humid in Phnom Penh, so
+                      make sure you bring water with you.
+                    </li>
+                    <li>
+                      Take your time: There's a lot to see at the museum, so
+                      take your time and enjoy the exhibits.
+                    </li>
                   </ul>
                 </div>
               </div>

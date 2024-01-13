@@ -102,9 +102,41 @@ const AngkorDetail = () => {
                 Some tips before you go to this place
                 <div>
                   <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>
+                      Sunrise or Sunset: Witnessing the sunrise or sunset over
+                      Angkor Wat is an unforgettable experience. The changing
+                      hues of light bathe the temple in a magical glow, creating
+                      a truly awe-inspiring sight.
+                    </li>
+                    <li>
+                      Dress Code: Remember, Angkor Wat is still a functioning
+                      Buddhist temple. Dress modestly to respect the cultural
+                      significance of the site. This means covering your
+                      shoulders and knees, and avoiding revealing clothing.
+                    </li>
+                    <li>
+                      Temple Etiquette: Be mindful of your behavior while
+                      exploring the temple. Speak softly, avoid touching sacred
+                      objects, and remove your shoes when entering inner
+                      sanctuaries.
+                    </li>
+                    <li>
+                      Explore Beyond the Main Temple: Angkor Wat is just one
+                      part of the vast Angkor archaeological park. Consider
+                      exploring other magnificent temples like Bayon, Ta
+                      Prohm, and Angkor Thom for a complete experience.
+                    </li>
+                    <li>
+                      Hire a Guide: A knowledgeable guide can enrich your visit
+                      by providing insights into the history, symbolism, and
+                      stories behind the temple's intricate details.
+                    </li>
+                    <li>
+                      Beat the Heat: Cambodia can be hot and humid, especially
+                      during the dry season. Wear comfortable clothes, bring
+                      sunscreen and a hat, and stay hydrated throughout your
+                      visit.
+                    </li>
                   </ul>
                 </div>
               </div>

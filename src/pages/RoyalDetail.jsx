@@ -3,7 +3,7 @@ import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import LocationBTN from "../components/LocationBTN";
 import "../assets/css/style.css";
 import { Museum, RoyalPalace } from "../assets/img";
 
@@ -72,10 +72,15 @@ const RoyalDetail = () => {
               <div className="place-details my-4">
                 <p className="details-title text-color mb-1">Place Details</p>
                 <p className="description">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Sapiente eos labore consequatur, dicta natus maiores, ullam
-                  dolor corporis eveniet beatae sunt delectus excepturi,
-                  cupiditate minus ad molestiae quod molestias nisi!
+                  The palace grounds boast a captivating blend of traditional
+                  Khmer architecture with influences from French colonial
+                  design. Golden spires, intricate carvings, and colorful murals
+                  adorn the buildings, creating a visually stunning spectacle.
+                   Two of the most iconic structures are the Throne Hall, where
+                  the King holds official ceremonies, and the Silver
+                  Pagoda, adorned with over 5,000 silver tiles. The intricate
+                  details and craftsmanship of these buildings are truly
+                  awe-inspiring.1
                 </p>
               </div>
 
@@ -84,9 +89,40 @@ const RoyalDetail = () => {
                 Some tips before you go to this place
                 <div>
                   <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>
+                      Dress modestly: Out of respect for Cambodian culture, it's
+                      important to dress modestly when visiting the
+                      palace. Cover your shoulders and knees, and avoid
+                      revealing clothing.
+                    </li>
+                    <li>
+                      LMind the dress code: Sleeveless shirts, shorts, and
+                      ripped clothing are not permitted within the palace
+                      grounds. You can rent appropriate clothing at the entrance
+                      if needed.
+                    </li>
+                    <li>
+                      Footwear matters: Comfortable shoes are essential, as
+                      you'll be doing a fair amount of walking on uneven
+                      surfaces.
+                    </li>
+                    <li>
+                      Respectful behavior: Maintain a respectful demeanor
+                      throughout your visit. Speak softly, avoid touching
+                      exhibits, and be mindful of other visitors.
+                    </li>
+                    <li>
+                      Hire a guide: Consider hiring a guide for a deeper
+                      understanding of the palace's history and
+                      significance. They can point out hidden details and share
+                      fascinating stories about the royal family and Cambodian
+                      traditions.
+                    </li>
+                    <li>
+                      Best time to visit: Early mornings or late afternoons
+                      offer the most pleasant temperatures and fewer crowds. The
+                      palace is closed on Mondays.
+                    </li>
                   </ul>
                 </div>
               </div>

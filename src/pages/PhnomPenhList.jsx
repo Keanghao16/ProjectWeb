@@ -101,7 +101,7 @@ const PhnomPenhList = () => {
                       turmoil during and after the reign of the Khmer Rouge.
                     </p>
 
-                    <a className="card-text" onClick={NavigateToMuseum}>
+                    <a className="card-text" onClick={NavigateToRoyal}>
                       Details...
                     </a>
                   </div>
